@@ -18,6 +18,8 @@
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
         "mediconesystems/livewire-datatables": "^0.4.3",
+        "sopamo/laravel-filepond": "^0.5.0",
+        "spatie/laravel-medialibrary": "^9.0.0",
         "spatie/laravel-permission": "^3.18",
         "spatie/ray": "^1.11"
     },

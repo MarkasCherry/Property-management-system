@@ -29,5 +29,7 @@ Route::group([
 
     //Properties
     Route::resource('properties', PropertyController::class);
-    Route::put('properties/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
+    Route::put('properties/{property}/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
+    Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
+    Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
 });

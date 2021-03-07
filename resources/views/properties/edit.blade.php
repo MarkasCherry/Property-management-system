@@ -43,30 +43,27 @@
                     @csrf
                     @method('PUT')
                     <div class="column is-12">
-                        <x-inputs.sun-editor id="sun-editor" for="long_description" name="long_description">
+                        <x-inputs.sun-editor id="sun-editor" for="long_description" name="long_description" value="{{ $property->long_description }}">
                             <x-slot name="title">{{ __('Property description') }}</x-slot>
                         </x-inputs.sun-editor>
                     </div>
+                    <x-buttons.form-submit title="{{ __('Save description') }}"></x-buttons.form-submit>
                 </form>
-                <x-buttons.form-submit title="{{ __('Save description') }}"></x-buttons.form-submit>
             </x-slot>
 
             <x-slot name="seoSettings">
                 {{--                <x-forms.seo-settings :model="$property" action="{{ route('property.updateSeo', $property) }}"></x-forms.seo-settings>--}}
             </x-slot>
             <x-slot name="media">
-                {{--                @if($manufacturer->getMedia()->isNotEmpty())--}}
-                {{--                    <div class="m-t-40">--}}
-                {{--                        <b>Current Media</b>--}}
-                {{--                        <div id="lightgallery" class="light-gallery-wrap">--}}
-                {{--                            @foreach($manufacturer->getMedia() as $media)--}}
-                {{--                                <a href="{{ $media->getUrl() }}">--}}
-                {{--                                    <img src="{{ $media->getUrl() }}" alt="{{ __('Media file') }}">--}}
-                {{--                                </a>--}}
-                {{--                            @endforeach--}}
-                {{--                        </div>--}}
-                {{--                    </div>--}}
-                {{--                @endif--}}
+                <form method="post" action="{{ route('properties.updateMedia', $property) }}">
+                    @csrf
+                    @method('PUT')
+                    <x-buttons.form-submit title="{{ __('Save media') }}"></x-buttons.form-submit>
+                </form>
+            </x-slot>
+
+            <x-slot name="seoSettings">
+                <x-forms.seo-settings action="{{ route('properties.updateSeo', $property) }}" :model="$property"></x-forms.seo-settings>
             </x-slot>
 
         </x-ui.tabs>

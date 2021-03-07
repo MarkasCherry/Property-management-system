@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\DescriptionRequest;
 use App\Http\Requests\PropertyRequest;
+use App\Http\Requests\SeoRequests;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Sopamo\LaravelFilepond\Filepond;
 
 class PropertyController extends Controller
 {
@@ -44,5 +46,17 @@ class PropertyController extends Controller
         $property->update($request->validated());
 
         return redirect()->back()->with('success', __('Property description has been updated!'));
+    }
+
+    public function updateMedia(Request $request, Property $property)
+    {
+        dd('media upload');
+    }
+
+    public function updateSeo(SeoRequests $request, Property $property)
+    {
+        $property->update($request->validated());
+
+        return redirect()->back()->with('success', __('Seo Settings has been updated!'));
     }
 }

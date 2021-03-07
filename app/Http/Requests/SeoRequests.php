@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class DescriptionRequest extends FormRequest
+class SeoRequests extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,9 @@ class DescriptionRequest extends FormRequest
     public function rules()
     {
         return [
-            'long_description' => 'required|min:10',
+            'seo_h1_title' => 'required',
+            'seo_meta_title' => 'required',
+            'seo_meta_description' => 'required',
         ];
     }
 }
