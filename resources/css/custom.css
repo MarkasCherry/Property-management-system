@@ -31,3 +31,23 @@ img, svg, video, canvas, audio, iframe, embed, object {
 .has-text-right {
     text-align: right;
 }
+
+.has-text-justified {
+    text-align: justify;
+}
+
+.rating .fas.fa-star {
+    color: #e3e3e3;
+}
+
+.rating .fas.fa-star.active {
+    color: #ffc43b;
+}
+
+.hint--primary:after {
+    width: 400px;
+}
+
+[class*="hint--"]:after {
+    white-space: unset;
+}

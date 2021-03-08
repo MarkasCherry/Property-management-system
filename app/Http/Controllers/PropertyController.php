@@ -13,7 +13,7 @@ class PropertyController extends Controller
 {
     public function index()
     {
-        $properties = Property::active()->get();
+        $properties = Property::all();
         return view('properties.index', compact('properties'));
     }
 
@@ -24,9 +24,10 @@ class PropertyController extends Controller
 
     public function store(PropertyRequest $request)
     {
-        Property::create($request->validated());
+        $property = Property::create($request->validated());
 
-        return redirect()->route('properties.index')->with('success', __('New property has been successfully added!'));
+        return redirect()->route('properties.edit', $property)
+            ->with('success', __('New property has been successfully added! Now you can fill the additional information and make property publicly visible'));
     }
 
     public function edit(Property $property)

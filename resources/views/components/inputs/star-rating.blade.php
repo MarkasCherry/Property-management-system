@@ -1,4 +1,4 @@
-<div class="field" style="text-align: center">
+<div class="field has-text-centered">
     <x-jet-label for="{{ $attributes->get('for') }}" value="{{ $title }}"/>
     <div id="full-stars-example-two">
         <div class="rating-group">

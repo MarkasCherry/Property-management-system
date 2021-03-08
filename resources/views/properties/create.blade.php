@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="column is-6">
-                        <x-inputs.textarea for="short_description" name="short_description">
+                        <x-inputs.textarea for="short_description" name="short_description" rows="4">
                             <x-slot name="title">{{ __('Short description') }}</x-slot>
                         </x-inputs.textarea>
                     </div>

@@ -156,13 +156,13 @@
     font-size: 2rem;
 }
 #full-stars-example-two .rating__icon--star {
-    color: orange;
+    color: #ffc43b;
 }
 #full-stars-example-two .rating__input:checked ~ .rating__label .rating__icon--star {
     color: #ddd;
 }
 #full-stars-example-two .rating-group:hover .rating__label .rating__icon--star {
-    color: orange;
+    color: #ffc43b;
 }
 #full-stars-example-two .rating__input:hover ~ .rating__label .rating__icon--star {
     color: #ddd;

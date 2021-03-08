@@ -29,10 +29,24 @@
                         </div>
 
                         <div class="column is-6">
-                            <x-inputs.textarea for="short_description" name="short_description" value="{{ $property->short_description }}">
+                            <x-inputs.textarea for="short_description" name="short_description" value="{{ $property->short_description }}" rows="4">
                                 <x-slot name="title">{{ __('Short description') }}</x-slot>
                             </x-inputs.textarea>
                         </div>
+
+                        <div class="column is-6">
+                            <div class="columns is-centered m-t-5">
+                                <x-inputs.switcher for="active" name="active">
+                                    <x-slot name="title">{{ __('Active?') }}</x-slot>
+                                </x-inputs.switcher>
+                            </div>
+                        </div>
+
+{{--                        <div class="columns is-centered m-t-5">--}}
+{{--                            <x-inputs.switcher for="active" name="active">--}}
+{{--                                <x-slot name="title">{{ __('Active?') }}</x-slot>--}}
+{{--                            </x-inputs.switcher>--}}
+{{--                        </div>--}}
                     </div>
                     <x-buttons.form-submit title="{{ __('Save Main Settings') }}"></x-buttons.form-submit>
                 </form>
@@ -51,9 +65,6 @@
                 </form>
             </x-slot>
 
-            <x-slot name="seoSettings">
-                {{--                <x-forms.seo-settings :model="$property" action="{{ route('property.updateSeo', $property) }}"></x-forms.seo-settings>--}}
-            </x-slot>
             <x-slot name="media">
                 <form method="post" action="{{ route('properties.updateMedia', $property) }}">
                     @csrf
