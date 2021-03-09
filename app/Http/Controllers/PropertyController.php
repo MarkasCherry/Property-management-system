@@ -50,6 +50,11 @@ class PropertyController extends Controller
         return redirect()->back()->with('success', __('Main property settings has been updated!'));
     }
 
+    public function destroy(Property $property)
+    {
+        $property->delete();
+    }
+
     public function updateDescription(DescriptionRequest $request, Property $property)
     {
         $property->update($request->validated());

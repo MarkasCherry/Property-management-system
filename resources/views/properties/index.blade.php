@@ -122,7 +122,7 @@
                                                             <span>Share this profile</span>
                                                         </div>
                                                     </a>
-                                                    <hr class="dropdown-divider">
+                                                    <hr class="dropdown-divider ">
                                                     <a href="#" class="dropdown-item is-media">
                                                         <div class="icon">
                                                             <i class="lnil lnil-trash-can-alt"></i>
@@ -166,7 +166,9 @@
                             </div>
                         </div>
                     </div>
+
                 @endforeach
+
 
             </div>
         </div>
@@ -180,15 +182,20 @@
 @push('scripts')
     <script>
         $('.alertify-modal').on('click', function () {
-            let test = $(this).data('property');
+            let property = $(this).data('property');
 
             initConfirm('Attention!',
-                'Are you sure you want to DELETE<b>"' + test.name + '"</b> property from the system? All the data assigned to this property' +
+                'Are you sure you want to DELETE<b> "' + property.name + '"</b> property from the system? All the data assigned to this property' +
                 'would be destroy and you will not be able to recreate it. Are you sure you want to proceed DELETING property?',
                 false, false,
                 'Delete', 'Cancel',
                 function (closeEvent) {
-                    console.log(test);
+                    axios({
+                        method: 'DELETE',
+                        url: 'properties/1',
+                    }).then(
+                        location.reload()
+                    );
                 })
         })
     </script>
