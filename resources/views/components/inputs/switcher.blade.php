@@ -9,7 +9,7 @@
             @endif
             <input type="checkbox"
                    class="is-switch"
-                   id="{{ $attributes->get('for') }}"
+                   id="{{ $attributes->get('name') }}"
                    name="{{ $attributes->get('name') ?? '' }}"
                    @if($attributes->get('model', false)) wire:model.defer="{{ $attributes->get('model') ?? $attributes->get('name', '') }}" @endif
                    @if($attributes->get('trigger')) wire:click="{{ $attributes->get('trigger') }}" @endif
@@ -22,5 +22,5 @@
             <span>{{ $title }}</span>
         </div>
     </div>
-    <x-jet-input-error for="{{ $attributes->get('for') }}" class="mt-2"/>
+    <x-jet-input-error for="{{ $attributes->get('name') }}" class="mt-2"/>
 </div>

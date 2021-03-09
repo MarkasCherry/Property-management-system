@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Google\GoogleMapsAPI;
 use App\Http\Requests\DescriptionRequest;
 use App\Http\Requests\PropertyRequest;
 use App\Http\Requests\SeoRequests;
@@ -38,6 +39,13 @@ class PropertyController extends Controller
     public function update(PropertyRequest $request, Property $property)
     {
         $property->update($request->validated());
+
+        $googleMaps = new GoogleMapsAPI;
+        $googleMaps->setLocation($request->get('address'));
+
+        $property->update([
+            'address' => $googleMaps->getData()->formatted_address ?? 'unknown'
+        ]);
 
         return redirect()->back()->with('success', __('Main property settings has been updated!'));
     }

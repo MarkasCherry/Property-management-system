@@ -25,6 +25,7 @@ class Property extends Model implements HasMedia
         'seo_h1_title',
         'seo_meta_title',
         'seo_meta_description',
+        'public',
         'active'
     ];
 

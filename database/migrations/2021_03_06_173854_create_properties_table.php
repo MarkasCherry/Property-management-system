@@ -16,13 +16,14 @@ class CreatePropertiesTable extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('rating');
+            $table->float('rating');
             $table->string('address');
             $table->text('short_description');
             $table->text('long_description')->nullable();
             $table->string('seo_h1_title')->nullable();
             $table->text('seo_meta_title')->nullable();
             $table->text('seo_meta_description')->nullable();
+            $table->boolean('public')->default(false);
             $table->boolean('active')->default(false);
             $table->timestamps();
             $table->softDeletes();

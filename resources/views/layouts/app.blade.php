@@ -25,6 +25,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/star-rating.css') }}"/>
 
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initAutocomplete&libraries=places&v=weekly"
+        defer
+    ></script>
+
     @livewireStyles
 
 </head>

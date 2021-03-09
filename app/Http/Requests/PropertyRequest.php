@@ -28,6 +28,8 @@ class PropertyRequest extends FormRequest
             'rating' => 'required|integer|numeric|min:1|max:5',
             'address' => 'required|max:255',
             'short_description' => 'required|min:10',
+            'active' => 'nullable',
+            'public' => 'nullable',
         ];
     }
 }

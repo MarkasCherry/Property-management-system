@@ -23,7 +23,7 @@
                         </div>
 
                         <div class="column is-6">
-                            <x-inputs.group for="address" name="address" value="{{ $property->address }}">
+                            <x-inputs.group for="address" name="address" value="{{ $property->address }}" autocomplete="off">
                                 <x-slot name="title">{{ __('Address') }}</x-slot>
                             </x-inputs.group>
                         </div>
@@ -36,17 +36,11 @@
 
                         <div class="column is-6">
                             <div class="columns is-centered m-t-5">
-                                <x-inputs.switcher for="active" name="active">
-                                    <x-slot name="title">{{ __('Active?') }}</x-slot>
+                                <x-inputs.switcher name="public" checked="{{ $property->public }}">
+                                    <x-slot name="title">{{ __('Public?') }}</x-slot>
                                 </x-inputs.switcher>
                             </div>
                         </div>
-
-{{--                        <div class="columns is-centered m-t-5">--}}
-{{--                            <x-inputs.switcher for="active" name="active">--}}
-{{--                                <x-slot name="title">{{ __('Active?') }}</x-slot>--}}
-{{--                            </x-inputs.switcher>--}}
-{{--                        </div>--}}
                     </div>
                     <x-buttons.form-submit title="{{ __('Save Main Settings') }}"></x-buttons.form-submit>
                 </form>
@@ -82,6 +76,13 @@
 @endsection
 
 @push('scripts')
+    <script>
+        function initAutocomplete() {
+            var input = document.getElementById('address');
+            new google.maps.places.Autocomplete(input);
+        }
+    </script>
+
     <script>
         lightGallery(document.getElementById('lightgallery'));
     </script>

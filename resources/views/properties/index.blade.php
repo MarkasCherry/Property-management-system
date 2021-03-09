@@ -85,13 +85,7 @@
                                     <div class="card-header-title">
                                         <div class="meta">
                                             <h3 class="dark-inverted" data-filter-match>{{ $property->name }}</h3>
-                                            <span class="rating p-t-10">
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star active"></i>
-                                                <i class="fas fa-star"></i>
-                                            </span>
+                                            <x-assets.stars-rating rating="{{ $property->rating }}"></x-assets.stars-rating>
                                         </div>
                                     </div>
                                     <div class="card-header-icon">
