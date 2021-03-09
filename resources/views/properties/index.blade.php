@@ -146,8 +146,8 @@
                                 <div class="card-image">
                                     <figure class="image is-16by9">
                                         <img
-                                            src="https://lh3.googleusercontent.com/proxy/DUaq5ypDHhUH-ls69L8e2zwPzOylfjGeIBtj2lDUKM41myS7iwtYamLWJyHR-OoSqYUkpSBTpYUFYTRhfkrtFz_l61nrf05VEEvh5ItPrC2aVWK3gw8WG5Di2o8bf6UuLcgZU01o72FOfDCfTjZkgZdCCiD-ofuptozaQtDeY45usivnHAVM3EXu7QeLrLgptCXMnX1J9kPTlr-oUB_xSyCd3sGuEi7DbFx1XIunZ3w2IjX0MeDEj8sK75y837xPte18O0bw5ZvXFE1j2T_-u4y7BaOe16cCJeLnWdH4D3MfMPth"
-                                            data-demo-src="https://lh3.googleusercontent.com/proxy/DUaq5ypDHhUH-ls69L8e2zwPzOylfjGeIBtj2lDUKM41myS7iwtYamLWJyHR-OoSqYUkpSBTpYUFYTRhfkrtFz_l61nrf05VEEvh5ItPrC2aVWK3gw8WG5Di2o8bf6UuLcgZU01o72FOfDCfTjZkgZdCCiD-ofuptozaQtDeY45usivnHAVM3EXu7QeLrLgptCXMnX1J9kPTlr-oUB_xSyCd3sGuEi7DbFx1XIunZ3w2IjX0MeDEj8sK75y837xPte18O0bw5ZvXFE1j2T_-u4y7BaOe16cCJeLnWdH4D3MfMPth"
+                                            src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                            data-demo-src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                                             alt="">
                                     </figure>
                                 </div>
@@ -157,9 +157,9 @@
                                             <b data-filter-match><i
                                                     class="fas fa-map-marker-alt p-r-5"></i>{{ $property->address }}</b>
                                             <p data-filter-match
-                                               class="dark-inverted m-t-10 has-text-justified hint--primary hint--bottom"
+                                               class="dark-inverted m-t-10 has-text-justified @if(strlen($property->short_description) > 200) hint--primary hint--bottom @endif"
                                                @if(strlen($property->short_description) > 200) data-hint="{{ $property->short_description }} @endif">
-                                                {{ mb_strimwidth($property->short_description, 0, 200, "...") }}
+                                                {!! mb_strimwidth($property->short_description, 0, 200, "...<span class='p-l-10 text-primary'>hover to read more</span>")  !!}
                                             </p>
                                         </div>
                                     </div>

@@ -21344,6 +21344,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/pulsate.css":
+/*!***********************************!*\
+  !*** ./resources/css/pulsate.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/src/index.js):\nError: ENOENT: no such file or directory, open 'D:\\Programs\\laragon\\www\\PropertiesManager\\resources\\css\\pulsate.css'\n    at D:\\Programs\\laragon\\www\\PropertiesManager\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at D:\\Programs\\laragon\\www\\PropertiesManager\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at D:\\Programs\\laragon\\www\\PropertiesManager\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at D:\\Programs\\laragon\\www\\PropertiesManager\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:72:11)");
+
+/***/ }),
+
 /***/ "./resources/css/star-rating.css":
 /*!***************************************!*\
   !*** ./resources/css/star-rating.css ***!
@@ -21417,16 +21428,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!**************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/custom.css ./resources/css/livewire-datatables.css ./resources/css/star-rating.css ***!
-  \**************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/custom.css ./resources/css/livewire-datatables.css ./resources/css/star-rating.css ./resources/css/pulsate.css ***!
+  \******************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\Programs\laragon\www\PropertiesManager\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! D:\Programs\laragon\www\PropertiesManager\resources\css\custom.css */"./resources/css/custom.css");
 __webpack_require__(/*! D:\Programs\laragon\www\PropertiesManager\resources\css\livewire-datatables.css */"./resources/css/livewire-datatables.css");
-module.exports = __webpack_require__(/*! D:\Programs\laragon\www\PropertiesManager\resources\css\star-rating.css */"./resources/css/star-rating.css");
+__webpack_require__(/*! D:\Programs\laragon\www\PropertiesManager\resources\css\star-rating.css */"./resources/css/star-rating.css");
+module.exports = __webpack_require__(/*! D:\Programs\laragon\www\PropertiesManager\resources\css\pulsate.css */"./resources/css/pulsate.css");
 
 
 /***/ })

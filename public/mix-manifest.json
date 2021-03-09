@@ -3,6 +3,7 @@
     "/assets/css/custom.css": "/assets/css/custom.css",
     "/assets/css/livewire-datatables.css": "/assets/css/livewire-datatables.css",
     "/assets/css/star-rating.css": "/assets/css/star-rating.css",
+    "/assets/css/pulsate.css": "/assets/css/pulsate.css",
     "/assets/js/remember-tab.js": "/assets/js/remember-tab.js",
     "/assets/libraries/js/notyf/notyf.min.js": "/assets/libraries/js/notyf/notyf.min.js",
     "/assets/libraries/css/notyf/notyf.min.css": "/assets/libraries/css/notyf/notyf.min.css"
