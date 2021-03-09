@@ -23,7 +23,6 @@ class CreatePropertiesTable extends Migration
             $table->string('seo_h1_title')->nullable();
             $table->text('seo_meta_title')->nullable();
             $table->text('seo_meta_description')->nullable();
-            $table->boolean('public')->default(false);
             $table->boolean('active')->default(false);
             $table->timestamps();
             $table->softDeletes();

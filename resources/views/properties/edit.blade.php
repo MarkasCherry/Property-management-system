@@ -36,8 +36,8 @@
 
                         <div class="column is-6">
                             <div class="columns is-centered m-t-5">
-                                <x-inputs.switcher name="public" checked="{{ $property->public }}">
-                                    <x-slot name="title">{{ __('Public?') }}</x-slot>
+                                <x-inputs.switcher name="active" checked="{{ $property->active }}">
+                                    <x-slot name="title">{{ __('Active?') }}</x-slot>
                                 </x-inputs.switcher>
                             </div>
                         </div>
