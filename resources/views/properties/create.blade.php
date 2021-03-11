@@ -35,3 +35,12 @@
         </x-ui.tabs>
     </x-forms.layout>
 @endsection
+
+@push('scripts')
+    <script>
+        function initAutocomplete() {
+            var input = document.getElementById('address');
+            new google.maps.places.Autocomplete(input);
+        }
+    </script>
+@endpush

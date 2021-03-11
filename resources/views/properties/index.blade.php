@@ -78,7 +78,7 @@
             <div class="columns is-multiline">
             @foreach($properties as $property)
                 <!--Grid Item-->
-                    <div class="column is-4">
+                    <div class="column is-4" id="property-{{ $property->id }}">
                         <div class="card-grid-item">
                             <div class="card" >
                                 <header class="card-header">
@@ -192,9 +192,9 @@
                 function (closeEvent) {
                     axios({
                         method: 'DELETE',
-                        url: 'properties/1',
+                        url: 'properties/' + property.id,
                     }).then(
-                        location.reload()
+                        $('#property-' + property.id).hide()
                     );
                 })
         })
