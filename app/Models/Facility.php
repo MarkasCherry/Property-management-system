@@ -10,6 +10,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * @method static active()
+ * @property mixed active
+ * @property mixed name
  */
 class Facility extends Model implements HasMedia
 {

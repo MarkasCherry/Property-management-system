@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Facility;
+use Mediconesystems\LivewireDatatables\BooleanColumn;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\DateColumn;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
@@ -36,9 +37,15 @@ class FacilitiesTable extends LivewireDatatable
                 ->defaultSort('desc')
                 ->hide(),
 
-//            Column::callback(['id', 'name'], function ($id, $name) {
-//                return view('livewire.table-actions', ['id' => $id, 'name' => $name]);
-//            })
+            BooleanColumn::name('active')
+                ->label('Active ?')
+                ->filterable(),
+
+            Column::callback(['id'], function ($id) {
+                return view('livewire.facilities.table-actions', ['id' => $id]);
+            })
+                ->label('Edit')
+                ->alignCenter(),
 
             Column::delete()
                 ->label('Delete')
