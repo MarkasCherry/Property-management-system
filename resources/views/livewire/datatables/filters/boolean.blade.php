@@ -1,15 +1,22 @@
-<div x-data class="flex flex-col">
-    <select
-        x-ref="select"
-        name="{{ $name }}"
-        class="m-1 text-sm leading-4 flex-grow form-select"
-        wire:input="doBooleanFilter('{{ $index }}', $event.target.value)"
-        x-on:input="$refs.select.value=''"
-    >
-        <option value=""></option>
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-    </select>
+<div x-data class="field flex flex-col">
+    <div class="control has-icons-left">
+        <div class="select">
+            <select
+                x-ref="select"
+                name="{{ $name }}"
+                class="datatable-filter datatable-select form-control"
+                wire:input="doBooleanFilter('{{ $index }}', $event.target.value)"
+                x-on:input="$refs.select.value=''"
+            >
+                <option value=""></option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+        <div class="icon is-small is-left">
+            <i class="lnil lnil-menu-circle"></i>
+        </div>
+    </div>
 
     <div class="flex flex-wrap max-w-48 space-x-1">
         @isset($this->activeBooleanFilters[$index])
