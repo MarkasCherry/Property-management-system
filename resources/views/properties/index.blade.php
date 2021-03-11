@@ -166,11 +166,11 @@
                             </div>
                         </div>
                     </div>
-
                 @endforeach
-
-
             </div>
+
+            {{ $properties->onEachSide(1)->links('vendor.pagination.default') }}
+
         </div>
     </div>
 @endsection
