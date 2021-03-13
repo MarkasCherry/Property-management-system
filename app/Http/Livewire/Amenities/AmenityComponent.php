@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Livewire\Facilities;
+namespace App\Http\Livewire\Amenities;
 
-use App\Models\Facility;
+use App\Models\Amenity;
 use Livewire\Component;
 
-class FacilityComponent extends Component
+class AmenityComponent extends Component
 {
     public string $name;
     public bool $active = false;
@@ -14,18 +14,16 @@ class FacilityComponent extends Component
     public $indexRoute;
     public $formSubmitButtonText;
     public $formAction;
+
     protected array $rules = [
-        'name' => 'required|max:255|min:3|unique:roles',
-        'permissions' => 'required',
+        'name' => 'required|max:255|min:1|unique',
     ];
-    /**
-     * @var Facility|mixed
-     */
-    public ?Facility $facility;
+
+    public ?Amenity $facility;
 
     public function mount($facility = null)
     {
-        if ($facility instanceof Facility) {
+        if ($facility instanceof Amenity) {
             $this->facility = $facility;
             $this->name = $facility->name;
             $this->active = $facility->active;
@@ -63,6 +61,6 @@ class FacilityComponent extends Component
 
     public function render()
     {
-        return view('livewire.facilities.facility-component');
+        return view('livewire.amenities.amenity-component');
     }
 }

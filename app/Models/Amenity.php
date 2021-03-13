@@ -13,7 +13,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
  * @property mixed active
  * @property mixed name
  */
-class Facility extends Model implements HasMedia
+class Amenity extends Model implements HasMedia
 {
     use SoftDeletes, InteractsWithMedia;
 
@@ -22,7 +22,7 @@ class Facility extends Model implements HasMedia
         'active'
     ];
 
-    public function scopeActive(Builder $builder)
+    public function scopeActive(Builder $builder): Builder
     {
         return $builder->where('active', true);
     }

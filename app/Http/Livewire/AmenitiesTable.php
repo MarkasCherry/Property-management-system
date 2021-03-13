@@ -2,22 +2,22 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Facility;
+use App\Models\Amenity;
 use Mediconesystems\LivewireDatatables\BooleanColumn;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\DateColumn;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
 use Mediconesystems\LivewireDatatables\NumberColumn;
 
-class FacilitiesTable extends LivewireDatatable
+class AmenitiesTable extends LivewireDatatable
 {
-    public $model = Facility::class;
+    public $model = Amenity::class;
 
     public $hideable = 'select';
 
     public function builder()
     {
-        return Facility::query();
+        return Amenity::query();
     }
 
     public function columns()
@@ -42,7 +42,7 @@ class FacilitiesTable extends LivewireDatatable
                 ->filterable(),
 
             Column::callback(['id'], function ($id) {
-                return view('livewire.facilities.table-actions', ['id' => $id]);
+                return view('livewire.amenities.table-actions', ['id' => $id]);
             })
                 ->label('Edit')
                 ->alignCenter(),

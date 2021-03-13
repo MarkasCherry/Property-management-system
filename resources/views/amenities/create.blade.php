@@ -7,9 +7,9 @@
             <div class="page-content-inner">
                 <div class="account-wrapper">
                     <div class="columns">
-                        @livewire('facilities.facility-component', [
-                            'formTitle' => 'Add facility',
-                            'indexRoute' => route('facilities.index')
+                        @livewire('amenities.amenity-component', [
+                            'formTitle' => 'Add amenity',
+                            'indexRoute' => route('amenities.index')
                         ])
                     </div>
                 </div>

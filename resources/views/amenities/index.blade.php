@@ -3,18 +3,17 @@
 @section('content')
 
     <div class="datatable-toolbar">
-
         <div class="buttons">
-            <a type="button" href="{{ route('facilities.create') }}" class="button h-button is-primary is-elevated">
+            <a type="button" href="{{ route('amenities.create') }}" class="button h-button is-primary is-elevated">
                 <span class="icon">
                         <i class="fas fa-plus"></i>
                 </span>
-                <span>Add Facility</span>
+                <span>{{ __('Add amenity') }}</span>
             </a>
         </div>
     </div>
 
-    <livewire:facilities-table/>
+    <livewire:amenities-table/>
 
 @endsection
 

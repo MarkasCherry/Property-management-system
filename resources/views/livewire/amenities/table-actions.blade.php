@@ -1,5 +1,5 @@
 <div>
-    <a href="{{ route('facilities.edit', App\Models\Facility::find($id)) }}"
+    <a href="{{ route('amenities.edit', App\Models\Amenity::find($id)) }}"
        class="p-1 text-blue-600 hover:bg-blue-600 hover:text-white rounded">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path
