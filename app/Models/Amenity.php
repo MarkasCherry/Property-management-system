@@ -5,20 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * @method static active()
+ * @method static create(array $array)
  * @property mixed active
  * @property mixed name
+ * @property mixed font_awesome
  */
-class Amenity extends Model implements HasMedia
+class Amenity extends Model
 {
-    use SoftDeletes, InteractsWithMedia;
+    use SoftDeletes;
 
     protected $fillable = [
         'name',
+        'font_awesome',
+        'icon',
         'active'
     ];
 

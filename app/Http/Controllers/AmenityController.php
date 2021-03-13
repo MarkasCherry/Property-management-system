@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Amenity;
 use Illuminate\Http\Request;
 
-class AmenitiesController extends Controller
+class AmenityController extends Controller
 {
     public function index()
     {
@@ -19,8 +19,8 @@ class AmenitiesController extends Controller
         return view('amenities.create');
     }
 
-    public function edit()
+    public function edit(Amenity $amenity)
     {
-        return view('amenities.create');
+        return view('amenities.edit', compact('amenity'));
     }
 }

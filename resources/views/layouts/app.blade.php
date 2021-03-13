@@ -19,18 +19,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ mix('assets/libraries/css/notyf/notyf.min.css') }}">
+    <link rel="stylesheet" href="{{ mix('assets/libraries/css/notyf/notyf.min.css') }}">
     @stack('styles_after')
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/css/star-rating.css') }}"/>
-
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initAutocomplete&libraries=places&v=weekly"
-        defer
-    ></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     @livewireStyles
 
@@ -74,6 +68,14 @@
 @livewireScripts
 
 <!-- Scripts -->
+<script
+    src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initAutocomplete&libraries=places&v=weekly"
+    defer
+></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 <script src="{{ mix('assets/libraries/js/notyf/notyf.min.js') }}"></script>
 <script src="{{ mix('assets/js/app.js') }}" defer></script>
 

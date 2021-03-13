@@ -10,10 +10,13 @@
             <input type="checkbox"
                    class="is-switch"
                    id="{{ $attributes->get('name') }}"
-                   name="{{ $attributes->get('name') ?? '' }}"
-                   @if($attributes->get('model', false)) wire:model.defer="{{ $attributes->get('model') ?? $attributes->get('name', '') }}" @endif
+                   @if($attributes->get('model', false)) wire:model.defer="{{ $attributes->get('model') ?? $attributes->get('name', '') }}"
+                   @else
+                        name="{{ $attributes->get('name') ?? '' }}"
+                        value="1"
+                   @endif
+
                    @if($attributes->get('trigger')) wire:click="{{ $attributes->get('trigger') }}" @endif
-                   value="1"
                    @if($attributes->get('checked') || old($attributes->get('name'), false)) checked @endif
             >
             <i></i>

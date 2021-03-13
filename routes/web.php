@@ -5,7 +5,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PropertyController;
-use App\Http\Controllers\AmenitiesController;
+use App\Http\Controllers\AmenityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,5 +35,5 @@ Route::group([
     Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
 
     //Facilities
-    Route::resource('amenities', AmenitiesController::class);
+    Route::resource('amenities', AmenityController::class);
 });

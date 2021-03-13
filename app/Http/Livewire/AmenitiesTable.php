@@ -28,9 +28,17 @@ class AmenitiesTable extends LivewireDatatable
                 ->hide(),
 
             Column::name('name')
-                ->label('Facility')
+                ->label('Amenity')
                 ->searchable()
                 ->editable(),
+
+            Column::callback(['font_awesome'], function ($font_awesome) {
+                return "<i class='{{ $font_awesome }}'></i>";
+            })->label('Font awesome'),
+
+//            Column::callback(['picture'], function ($picture) {
+//                return "<img width='62' src='" . env('PWA_URL') . "/storage/" . $picture . "'>";
+//            })->label('Picture'),
 
             DateColumn::name('created_at')
                 ->label('Created at')

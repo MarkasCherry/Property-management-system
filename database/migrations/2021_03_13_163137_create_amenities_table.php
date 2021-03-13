@@ -17,6 +17,8 @@ class CreateAmenitiesTable extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('active')->default(true);
+            $table->string('font_awesome')->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
