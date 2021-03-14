@@ -47,7 +47,7 @@ class PropertyController extends Controller
             'address' => $googleMaps->getData()->formatted_address ?? 'unknown'
         ]);
 
-        return redirect()->back()->with('success', __('Main property settings has been updated!'));
+        return back()->with('success', __('Main property settings has been updated!'));
     }
 
     public function destroy(Property $property)
@@ -59,7 +59,7 @@ class PropertyController extends Controller
     {
         $property->update($request->validated());
 
-        return redirect()->back()->with('success', __('Property description has been updated!'));
+        return back()->with('success', __('Property description has been updated!'));
     }
 
     public function updateMedia(Request $request, Property $property)
@@ -71,6 +71,12 @@ class PropertyController extends Controller
     {
         $property->update($request->validated());
 
-        return redirect()->back()->with('success', __('Seo Settings has been updated!'));
+        return back()->with('success', __('Seo Settings has been updated!'));
+    }
+
+    public function updateAmenities(Request $request, Property $property) {
+        $property->amenities()->sync($request->get('amenities'));
+
+        return back()->with('success', __('Property amenities has been updated!'));
     }
 }

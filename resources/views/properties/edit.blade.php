@@ -4,7 +4,7 @@
 
 @section('content')
     <x-forms.layout headerTitle="Edit property: {{ $property->name }}" redirect="{{ route('properties.index') }}">
-        <x-ui.tabs :tabs="['mainSettings', 'description', 'media', 'seoSettings',]">
+        <x-ui.tabs :tabs="['mainSettings', 'description', 'media', 'amenities', 'seoSettings',]">
             <x-slot name="mainSettings">
                 <form method="post" action="{{ route('properties.update', $property) }}">
                     @csrf
@@ -67,6 +67,28 @@
                 </form>
             </x-slot>
 
+            <x-slot name="amenities">
+                <form method="post" action="{{ route('properties.updateAmenities', $property) }}">
+                    @csrf
+                    @method('PUT')
+                    <div class="field">
+                        <label>{{ __('Add property amenities') }}</label>
+                        <div class="control">
+                            <select class="form-control" name="amenities[]"
+                                    id="choices-multiple-remove-button" placeholder="{{ __('Select amenities') }}"
+                                    multiple>
+                                @foreach($amenities as $amenity)
+                                    <option value="{{ $amenity->id }}" @if($property->amenities()->whereAmenityId($amenity->id)->exists()) selected @endif>
+                                        {{ $amenity->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <x-buttons.form-submit title="{{ __('Save amenities') }}"></x-buttons.form-submit>
+                </form>
+            </x-slot>
+
             <x-slot name="seoSettings">
                 <x-forms.seo-settings action="{{ route('properties.updateSeo', $property) }}" :model="$property"></x-forms.seo-settings>
             </x-slot>
@@ -76,6 +98,12 @@
 @endsection
 
 @push('scripts')
+    <script>
+        var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+            removeItemButton: true,
+        });
+    </script>
+
     <script>
         function initAutocomplete() {
             var input = document.getElementById('address');

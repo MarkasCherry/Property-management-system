@@ -33,4 +33,8 @@ class Property extends Model implements HasMedia
     {
         return $builder->where('active', true);
     }
+
+    public function amenities() {
+        return $this->belongsToMany(Amenity::class, 'property_amenity');
+    }
 }

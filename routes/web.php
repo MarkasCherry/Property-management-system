@@ -33,6 +33,8 @@ Route::group([
     Route::put('properties/{property}/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
     Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
     Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
+    Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
+    Route::put('properties/{property}/updateAmenities', [PropertyController::class, 'updateAmenities'])->name('properties.updateAmenities');
 
     //Facilities
     Route::resource('amenities', AmenityController::class);
