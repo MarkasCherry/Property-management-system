@@ -48,7 +48,6 @@ class AmenityComponent extends Component
             $iconPath = $this->icon->store('temporary');
         }
 
-
         $amenity = Amenity::create([
             'name' => $this->name,
             'font_awesome' => $this->font_awesome,

@@ -54,18 +54,15 @@
                             <div class="columns is-centered m-t-5">
                                 <x-inputs.file name="icon" for="icon" file="{{ $icon }}"></x-inputs.file>
                             </div>
-                        </div>
 
-                        @if($formAction == "update" && is_null($icon))
-                            <div class="column is-6">
+                            @if($formAction == "update" && is_null($icon))
                                 <x-jet-label for="icon" value="{{ __('Your custom icon:') }}" />
                                 <div class="p-t-5">
-                                    <img src="{{ asset('storage/' . $amenity->icon) }}" width="100" alt="{{ $amenity->name }}">
+                                    <img src="{{ asset('storage/' . $amenity->icon) }}" width="32" alt="{{ $amenity->name }}">
                                 </div>
-                            </div>
-                        @endif
+                            @endif
+                        </div>
                     </div>
-                    <x-jet-input-error for="permissions" class="mt-2"/>
                 </div>
             </div>
         </div>
