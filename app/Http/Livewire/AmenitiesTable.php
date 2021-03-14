@@ -33,21 +33,26 @@ class AmenitiesTable extends LivewireDatatable
                 ->editable(),
 
             Column::callback(['font_awesome'], function ($font_awesome) {
-                return "<i class='{{ $font_awesome }}'></i>";
-            })->label('Font awesome'),
+                return "<i style='font-size: 18px' class='$font_awesome'></i>";
+            })
+                ->label('Font awesome')
+                ->alignCenter(),
 
-//            Column::callback(['picture'], function ($picture) {
-//                return "<img width='62' src='" . env('PWA_URL') . "/storage/" . $picture . "'>";
-//            })->label('Picture'),
+            Column::callback(['icon'], function ($icon) {
+                return "<img width=18 src=" . asset('storage/' . $icon) . "/>";
+            })
+                ->label('Custom icon')
+                ->alignCenter(),
+
+            BooleanColumn::name('active')
+                ->label('Active ?')
+                ->filterable()
+                ->alignCenter(),
 
             DateColumn::name('created_at')
                 ->label('Created at')
                 ->defaultSort('desc')
                 ->hide(),
-
-            BooleanColumn::name('active')
-                ->label('Active ?')
-                ->filterable(),
 
             Column::callback(['id'], function ($id) {
                 return view('livewire.amenities.table-actions', ['id' => $id]);
