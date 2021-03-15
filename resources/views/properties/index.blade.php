@@ -160,8 +160,8 @@
                                 </div>
 
                                 <footer class="card-footer">
-                                    <a href="#" class="card-footer-item">View</a>
-                                    <a href="{{ route('properties.edit', $property) }}" class="card-footer-item">Settings</a>
+                                    <a href="{{ route('properties.show', $property) }}" class="card-footer-item">{{ __('Rooms') }}</a>
+                                    <a href="{{ route('properties.edit', $property) }}" class="card-footer-item">{{ __('Settings') }}</a>
                                 </footer>
                             </div>
                         </div>

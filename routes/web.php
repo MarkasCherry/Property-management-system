@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\AmenityController;
+use App\Http\Controllers\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,18 +25,24 @@ Route::group([
         'verified'
     ],
 ], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('dashboard');
-    Route::resource('roles', RoleController::class);
-    Route::resource('users', UserController::class);
+    Route::prefix('admin')->group(function() {
+        Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+        Route::resource('roles', RoleController::class);
+        Route::resource('users', UserController::class);
 
-    //Properties
-    Route::resource('properties', PropertyController::class);
-    Route::put('properties/{property}/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
-    Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
-    Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
-    Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
-    Route::put('properties/{property}/updateAmenities', [PropertyController::class, 'updateAmenities'])->name('properties.updateAmenities');
+        //Properties
+        Route::resource('properties', PropertyController::class);
+        Route::put('properties/{property}/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
+        Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
+        Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
+        Route::put('properties/{property}/updateAmenities', [PropertyController::class, 'updateAmenities'])->name('properties.updateAmenities');
 
-    //Facilities
-    Route::resource('amenities', AmenityController::class);
+        //Rooms
+        Route::resource('rooms', RoomController::class);
+        Route::put('rooms/{room}/updateMedia', [RoomController::class, 'updateMedia'])->name('rooms.updateMedia');
+        Route::put('rooms/{room}/updateSeo', [RoomController::class, 'updateSeo'])->name('rooms.updateSeo');
+
+        //Facilities
+        Route::resource('amenities', AmenityController::class);
+    });
 });

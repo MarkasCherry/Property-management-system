@@ -8,14 +8,19 @@ use App\Http\Requests\PropertyRequest;
 use App\Http\Requests\SeoRequests;
 use App\Models\Property;
 use Illuminate\Http\Request;
-use Sopamo\LaravelFilepond\Filepond;
 
 class PropertyController extends Controller
 {
     public function index()
     {
         $properties = Property::paginate(10);
+
         return view('properties.index', compact('properties'));
+    }
+
+    public function show(Property $property)
+    {
+        return view('properties.show', compact('property'));
     }
 
     public function create()
