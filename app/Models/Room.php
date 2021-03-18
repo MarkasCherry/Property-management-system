@@ -14,10 +14,10 @@ class Room extends Model
     protected $fillable = [
         'property_id',
         'name',
-        'number',
+        'room_number',
         'capacity',
-        'beds_count',
-        'bathrooms_count',
+        'bed_count',
+        'bathroom_count',
         'short_description',
         'long_description',
         'seo_h1_title',

@@ -36,6 +36,8 @@ Route::group([
         Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
         Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
         Route::put('properties/{property}/updateAmenities', [PropertyController::class, 'updateAmenities'])->name('properties.updateAmenities');
+        Route::get('properties/{property}/add-room', [PropertyController::class, 'addRoom'])->name('properties.addRoom');
+        Route::post('properties/{property}/add-room', [PropertyController::class, 'storeRoom'])->name('properties.storeRoom');
 
         //Rooms
         Route::resource('rooms', RoomController::class);

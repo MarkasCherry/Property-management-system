@@ -12,7 +12,7 @@
                     <div class="columns is-multiline">
                         <div class="column is-4">
                             <x-inputs.group for="name" name="name" value="{{ $room->name }}">
-                                <x-slot name="title">{{ __('Property name') }}</x-slot>
+                                <x-slot name="title">{{ __('Room name') }}</x-slot>
                             </x-inputs.group>
                         </div>
 

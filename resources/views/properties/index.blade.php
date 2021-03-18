@@ -76,8 +76,7 @@
 
             <!--Card Grid v2-->
             <div class="columns is-multiline">
-            @foreach($properties as $property)
-                <!--Grid Item-->
+                @foreach($properties as $property)
                     <div class="column is-4" id="property-{{ $property->id }}">
                         <div class="card-grid-item">
                             <div class="card" >

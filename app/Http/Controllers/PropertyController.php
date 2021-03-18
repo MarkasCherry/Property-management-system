@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Google\GoogleMapsAPI;
 use App\Http\Requests\DescriptionRequest;
 use App\Http\Requests\PropertyRequest;
+use App\Http\Requests\RoomRequest;
 use App\Http\Requests\SeoRequests;
 use App\Models\Property;
 use Illuminate\Http\Request;
@@ -39,6 +40,18 @@ class PropertyController extends Controller
     public function edit(Property $property)
     {
         return view('properties.edit', compact('property'));
+    }
+
+    public function addRoom(Property $property)
+    {
+        return view('properties.rooms.create', compact('property'));
+    }
+
+    public function storeRoom(RoomRequest $request, Property $property)
+    {
+        $property->rooms()->create($request->validated());
+
+        return redirect()->route('properties.show', $property);
     }
 
     public function update(PropertyRequest $request, Property $property)
