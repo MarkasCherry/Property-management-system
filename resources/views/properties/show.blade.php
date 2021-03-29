@@ -52,7 +52,7 @@
 
                     <div id="active-items-tab" class="tab-content is-active">
                         <div class="list-view-inner">
-                            @foreach($property->rooms as $room)
+                            @forelse($property->rooms as $room)
                                 <div class="list-view-item">
                                     <div class="list-view-item-inner">
                                         <img style="max-height: unset" src="{{ asset('https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') }}" alt="">
@@ -82,7 +82,18 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                            @empty
+                                <!--No results returned -->
+                                <div class="page-placeholder custom-text-filter-placeholder">
+                                    <div class="placeholder-content">
+                                        <img class="light-image" src="{{ asset('assets/img/illustrations/placeholders/search-3.svg') }}" alt=""/>
+                                        <img class="dark-image" src="{{ asset('assets/img/illustrations/placeholders/search-3-dark.svg') }}" alt=""/>
+                                        <h3>{{ __("No rooms found") }}</h3>
+                                        <p class="is-larger">{{ __('We were not able to find any rooms. You can always add them by clicking "+add room"
+                                            in the top right corner.') }}</p>
+                                    </div>
+                                </div>
+                            @endforelse
                         </div>
                     </div>
                 </div>

@@ -150,6 +150,11 @@
         </div>
         <div class="center">
             <div id="webapp-navbar-menu" class="centered-links">
+                <a href="{{ route('properties.index') }}" id="dashboards-navbar-menu"
+                   class="centered-link">
+                    <i data-feather="home"></i>
+                    <span>Properties</span>
+                </a>
                 <a id="dashboards-navbar-menu"
                    class="centered-link centered-link-toggle" data-menu-id="dashboards-webapp-menu">
                     <i data-feather="activity"></i>

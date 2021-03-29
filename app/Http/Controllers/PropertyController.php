@@ -62,7 +62,7 @@ class PropertyController extends Controller
         $googleMaps->setLocation($request->get('address'));
 
         $property->update([
-            'address' => $googleMaps->getData()->formatted_address ?? 'unknown'
+            'address' => $googleMaps->getData()->formatted_address ?? $request->get('address')
         ]);
 
         return back()->with('success', __('Main property settings has been updated!'));

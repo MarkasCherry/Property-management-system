@@ -66,17 +66,17 @@
             <!--List Empty Search Placeholder -->
             <div class="page-placeholder custom-text-filter-placeholder is-hidden">
                 <div class="placeholder-content">
-                    <img class="light-image" src="assets/img/illustrations/placeholders/search-3.svg" alt=""/>
-                    <img class="dark-image" src="assets/img/illustrations/placeholders/search-3-dark.svg" alt=""/>
-                    <h3>We couldn't find any matching results.</h3>
-                    <p class="is-larger">Too bad. Looks like we couldn't find any matching results for the
-                        search terms you've entered. Please try different search terms or criteria.</p>
+                    <img class="light-image" src="{{ asset('assets/img/illustrations/placeholders/search-3.svg') }}" alt=""/>
+                    <img class="dark-image" src="{{ asset('assets/img/illustrations/placeholders/search-3-dark.svg') }}" alt=""/>
+                    <h3>{{ __("We couldn't find any matching results.") }}</h3>
+                    <p class="is-larger">{{ __("Too bad. Looks like we couldn't find any matching results for the
+                        search terms you've entered. Please try different search terms or criteria.") }}</p>
                 </div>
             </div>
 
             <!--Card Grid v2-->
             <div class="columns is-multiline">
-                @foreach($properties as $property)
+                @forelse($properties as $property)
                     <div class="column is-4" id="property-{{ $property->id }}">
                         <div class="card-grid-item">
                             <div class="card" >
@@ -165,7 +165,18 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <!--No results returned -->
+                    <div class="page-placeholder custom-text-filter-placeholder">
+                        <div class="placeholder-content">
+                            <img class="light-image" src="{{ asset('assets/img/illustrations/placeholders/search-3.svg') }}" alt=""/>
+                            <img class="dark-image" src="{{ asset('assets/img/illustrations/placeholders/search-3-dark.svg') }}" alt=""/>
+                            <h3>{{ __("No properties found") }}</h3>
+                            <p class="is-larger">{{ __("We were not able to find any properties. You can always add them by clicking '+add'
+                                in the top right corner.") }}</p>
+                        </div>
+                    </div>
+                @endforelse
             </div>
 
             {{ $properties->onEachSide(1)->links('vendor.pagination.default') }}
@@ -184,7 +195,7 @@
             let property = $(this).data('property');
 
             initConfirm('Attention!',
-                'Are you sure you want to DELETE<b> "' + property.name + '"</b> property from the system? All the data assigned to this property' +
+                'Are you sure you want to DELETE<b> "' + property.name + '"</b> property from the system? All the data assigned to this property ' +
                 'would be destroy and you will not be able to recreate it. Are you sure you want to proceed DELETING property?',
                 false, false,
                 'Delete', 'Cancel',

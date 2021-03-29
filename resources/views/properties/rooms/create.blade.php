@@ -54,7 +54,7 @@
 
                     <div class="column is-6">
                         <x-inputs.textarea for="long_description" name="long_description" value="{{ old('long_description') }}" rows="4">
-                            <x-slot name="title">{{ __('Short description') }}</x-slot>
+                            <x-slot name="title">{{ __('Long description') }}</x-slot>
                         </x-inputs.textarea>
                     </div>
                 </div>
