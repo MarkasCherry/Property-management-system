@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
@@ -26,8 +27,13 @@ Route::group([
     ],
 ], function () {
     Route::prefix('admin')->group(function() {
+        //Dashboard
         Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+
+        //Roles
         Route::resource('roles', RoleController::class);
+
+        //Users
         Route::resource('users', UserController::class);
 
         //Properties
@@ -46,5 +52,8 @@ Route::group([
 
         //Facilities
         Route::resource('amenities', AmenityController::class);
+
+        //Clients
+        Route::resource('clients', ClientController::class);
     });
 });

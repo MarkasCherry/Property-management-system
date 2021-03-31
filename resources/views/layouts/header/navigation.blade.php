@@ -153,17 +153,17 @@
                 <a href="{{ route('properties.index') }}" id="dashboards-navbar-menu"
                    class="centered-link">
                     <i data-feather="home"></i>
-                    <span>Properties</span>
+                    <span>{{ __('Properties') }}</span>
                 </a>
                 <a id="dashboards-navbar-menu"
                    class="centered-link centered-link-toggle" data-menu-id="dashboards-webapp-menu">
                     <i data-feather="activity"></i>
-                    <span>Menu</span>
+                    <span>{{ __('Menu') }}</span>
                 </a>
                 <a id="dashboards-navbar-settings"
                    class="centered-link centered-link-toggle" data-menu-id="dashboards-webapp-settings">
                     <i data-feather="settings"></i>
-                    <span>Settings</span>
+                    <span>{{ __('Settings') }}</span>
                 </a>
             </div>
         </div>
