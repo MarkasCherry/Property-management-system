@@ -29,7 +29,7 @@ class ClientsTable extends LivewireDatatable
                 ->hide(),
 
             Column::callback(['profile_photo_path'], function ($path) {
-                return "<img width=96 src=$path/>";
+                return "<img width=96 src=$path />";
             })
                 ->label('Photo')
                 ->alignCenter(),

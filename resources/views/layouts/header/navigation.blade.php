@@ -155,6 +155,11 @@
                     <i data-feather="home"></i>
                     <span>{{ __('Properties') }}</span>
                 </a>
+                <a href="{{ route('clients.index') }}" id="dashboards-navbar-menu"
+                   class="centered-link">
+                    <i data-feather="users"></i>
+                    <span>{{ __('Clients') }}</span>
+                </a>
                 <a id="dashboards-navbar-menu"
                    class="centered-link centered-link-toggle" data-menu-id="dashboards-webapp-menu">
                     <i data-feather="activity"></i>
