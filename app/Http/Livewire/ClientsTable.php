@@ -34,8 +34,8 @@ class ClientsTable extends LivewireDatatable
                 ->label('Photo')
                 ->alignCenter(),
 
-            Column::callback(['first_name', 'last_name'], function ($firstName, $lastName) {
-                return $firstName . ' ' . $lastName;
+            Column::callback(['name', 'lastname'], function ($name, $lastname) {
+                return $name . ' ' . $lastname;
             })
                 ->label("Client's name")
                 ->searchable()
