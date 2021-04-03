@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Clients;
 
-//use App\Mail\SendPassword;
+use App\Mail\SendPassword;
 use App\Models\Client;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class ClientComponent extends Component
@@ -47,16 +49,16 @@ class ClientComponent extends Component
     {
         $this->validate();
 
-        //Generate new password for client, if needed
-//        if($this->generatePassword) {
-//            $generatedPassword = Str::random(8);
-//            $this->client->update(['password' => bcrypt($generatedPassword)]);
-//
-//            Mail::to($this->client->email)
-//                ->send(new SendPassword($generatedPassword));
-//
-//            $this->generatePassword = false;
-//        }
+//        Generate new password for client, if needed
+        if($this->generatePassword) {
+            $generatedPassword = Str::random(8);
+            $this->client->update(['password' => bcrypt($generatedPassword)]);
+
+            Mail::to($this->client->email)
+                ->send(new SendPassword($generatedPassword));
+
+            $this->reset(['generatePassword']);
+        }
 
         /** @var Client $client */
         $this->client->update([
