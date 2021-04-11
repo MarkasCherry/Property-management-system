@@ -47,7 +47,7 @@ class ClientComponent extends Component
 
     public function update()
     {
-        $rules['email'] = 'required|string|email' . Rule::unique('clients')->ignore($this->client->id);
+        $this->rules['email'] = ['required', 'string', 'email',  Rule::unique('clients')->ignore($this->client->id)];
         $this->validate();
 
 //      Generate new password for client, if needed
@@ -68,7 +68,10 @@ class ClientComponent extends Component
             'active' => $this->active
         ]);
 
-        $this->emit('alert', ['type' => 'success', 'message' => 'Client has been updated!']);
+        $this->emit('alert', [
+            'type' => 'success',
+            'message' => 'Client has been updated!'
+        ]);
     }
 
     public function store()
@@ -93,6 +96,15 @@ class ClientComponent extends Component
         $this->emit('alert', [
             'type' => 'success',
             'message' => 'Client has been created!'
+        ]);
+
+        $this->reset([
+            'name',
+            'lastname',
+            'email',
+            'phone',
+            'active',
+            'generatePassword'
         ]);
     }
 
