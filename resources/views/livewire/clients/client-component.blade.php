@@ -5,28 +5,28 @@
             <div class="columns is-multiline">
                 <!--Fieldset-->
                 <div class="column is-6">
-                    <x-inputs.group for="name" value="{{ old('name') }}" model="name">
+                    <x-inputs.group for="name" model="name">
                         <x-slot name="title">{{ __('First name') }}</x-slot>
                     </x-inputs.group>
                 </div>
 
                 <!--Fieldset-->
                 <div class="column is-6">
-                    <x-inputs.group for="lastname" value="{{ old('lastname') }}" model="lastname">
+                    <x-inputs.group for="lastname" model="lastname">
                         <x-slot name="title">{{ __('Last name') }}</x-slot>
                     </x-inputs.group>
                 </div>
 
                 <!--Fieldset-->
                 <div class="column is-6">
-                    <x-inputs.group for="email" value="{{ old('email') }}" model="email">
+                    <x-inputs.group for="email" model="email">
                         <x-slot name="title">{{ __('Email') }}</x-slot>
                     </x-inputs.group>
                 </div>
 
                 <!--Fieldset-->
                 <div class="column is-6">
-                    <x-inputs.group for="phone" value="{{ old('phone') }}" model="phone">
+                    <x-inputs.group for="phone" model="phone">
                         <x-slot name="title">{{ __('Phone') }}</x-slot>
                     </x-inputs.group>
                 </div>
