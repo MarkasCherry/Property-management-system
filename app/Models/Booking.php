@@ -23,16 +23,16 @@ class Booking extends Model
 
     public function status()
     {
-        return $this->hasOne(BookingStatus::class);
+        return $this->belongsTo(BookingStatus::class);
     }
 
     public function client()
     {
-        return $this->hasOne(Client::class);
+        return $this->belongsTo(Client::class);
     }
 
     public function room()
     {
-        return $this->hasOne(Room::class);
+        return $this->belongsTo(Room::class);
     }
 }
