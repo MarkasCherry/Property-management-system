@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
     public function index()
     {
-        return view('bookings.index');
+        $bookings = Booking::all()->sortByDesc('created_at');
+
+        return view('bookings.index', compact('bookings'));
     }
 }
