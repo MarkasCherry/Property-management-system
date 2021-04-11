@@ -3,7 +3,7 @@
 @section('title', __('Properties'))
 
 @section('content')
-    <x-forms.layout headerTitle="Edit client" redirect="{{ route('clients.index') }}">
+    <x-forms.layout headerTitle="Edit Client" redirect="{{ route('clients.index') }}">
         <x-ui.tabs :tabs="['mainSettings', 'media']">
             <x-slot name="mainSettings">
                 @livewire('clients.client-component', [

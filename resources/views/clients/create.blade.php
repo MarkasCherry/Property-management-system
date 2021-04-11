@@ -1,20 +1,13 @@
 @extends('layouts.app')
 
-@section('content')
-    <div class="page-content-wrapper">
-        <div class="page-content is-relative">
+@section('title', __('Properties'))
 
-            <div class="page-content-inner">
-                <div class="account-wrapper">
-                    <div class="columns">
-                        @livewire('clients.client-component', [
-                            'formTitle' => 'Create Client',
-                            'indexRoute' => route('clients.index'),
-                            'formSubmitButtonText' => 'Create'
-                        ])
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+@section('content')
+    <x-forms.layout headerTitle="Create Client" redirect="{{ route('clients.index') }}">
+            @livewire('clients.client-component', [
+                'formTitle' => 'Create Client',
+                'indexRoute' => route('clients.index'),
+                'formSubmitButtonText' => 'Create'
+            ])
+    </x-forms.layout>
 @endsection

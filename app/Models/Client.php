@@ -4,6 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property mixed name
+ * @property mixed lastname
+ * @property mixed phone
+ * @property mixed email
+ * @property mixed active
+ */
 class Client extends Model
 {
     /**
@@ -16,6 +23,7 @@ class Client extends Model
         'lastname',
         'position',
         'email',
+        'phone',
         'password',
         'profile_photo_path'
     ];

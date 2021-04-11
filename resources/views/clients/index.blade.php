@@ -4,7 +4,7 @@
 
     <div class="datatable-toolbar">
         <div class="buttons">
-            <a type="button" href="#" class="button h-button is-primary is-elevated" disabled>
+            <a type="button" href="{{ route('clients.create') }}" class="button h-button is-primary is-elevated">
                 <span class="icon">
                         <i class="fas fa-plus"></i>
                 </span>

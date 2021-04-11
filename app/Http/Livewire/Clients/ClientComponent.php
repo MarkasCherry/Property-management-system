@@ -6,15 +6,18 @@ use App\Mail\SendPassword;
 use App\Models\Client;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 use Livewire\Component;
 
 class ClientComponent extends Component
 {
-    public ?string $name;
+    public ?Client $client;
+
+    public $name;
     public $lastname;
     public $phone;
     public $email;
-    public $active = false;
+    public bool $active = false;
 
     public $generatePassword;
     public $selectedTab;
@@ -26,12 +29,9 @@ class ClientComponent extends Component
     protected array $rules = [
         'name' => 'required|min:3|max:255',
         'lastname' => 'required|min:3|max:255',
-        'phone' => 'nullable|string|regex:/^([0-9\s\-\+\(\)]*)$/|min:3|max:35',
+        'phone' => 'required|string|regex:/^([0-9\s\-\+\(\)]*)$/|min:3|max:35',
+        'email' => 'required|string|email|unique:clients'
     ];
-    /**
-     * @var Client|mixed
-     */
-    public ?Client $client;
 
     public function mount($client = null)
     {
@@ -47,9 +47,10 @@ class ClientComponent extends Component
 
     public function update()
     {
+        $rules['email'] = 'required|string|email' . Rule::unique('clients')->ignore($this->client->id);
         $this->validate();
 
-//        Generate new password for client, if needed
+//      Generate new password for client, if needed
         if($this->generatePassword) {
             $generatedPassword = Str::random(8);
             $this->client->update(['password' => bcrypt($generatedPassword)]);
@@ -60,7 +61,6 @@ class ClientComponent extends Component
             $this->reset(['generatePassword']);
         }
 
-        /** @var Client $client */
         $this->client->update([
             'name' => $this->name,
             'lastname' => $this->lastname,
@@ -70,6 +70,32 @@ class ClientComponent extends Component
 
         $this->emit('alert', ['type' => 'success', 'message' => 'Client has been updated!']);
     }
+
+    public function store()
+    {
+        $this->validate();
+
+        //Generate new password for client
+        $generatedPassword = Str::random(8);
+
+        $client = Client::create([
+            'name' => $this->name,
+            'lastname' => $this->lastname,
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'active' => $this->active,
+            'password' => bcrypt($generatedPassword)
+        ]);
+
+        Mail::to($client->email)
+            ->send(new SendPassword($generatedPassword));
+
+        $this->emit('alert', [
+            'type' => 'success',
+            'message' => 'Client has been created!'
+        ]);
+    }
+
     public function render()
     {
         return view('livewire.clients.client-component');

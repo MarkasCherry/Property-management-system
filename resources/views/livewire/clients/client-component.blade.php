@@ -40,14 +40,16 @@
                     </div>
                 </div>
 
-                <!--Fieldset-->
-                <div class="column is-6">
-                    <label class="checkbox is-outlined is-danger">
-                        <input type="checkbox" wire:model="generatePassword" value="1">
-                        <span></span>
-                        <span class="text-h-red">Generate new password for a client?</span>
-                    </label>
-                </div>
+                @if($formAction == 'update')
+                    <!--Fieldset-->
+                    <div class="column is-6">
+                        <label class="checkbox is-outlined is-danger">
+                            <input type="checkbox" wire:model="generatePassword" value="1">
+                            <span></span>
+                            <span class="text-h-red">Generate new password for a client?</span>
+                        </label>
+                    </div>
+                @endif
             </div>
 
             <div class="has-text-right">
