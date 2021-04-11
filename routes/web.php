@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
@@ -55,5 +56,8 @@ Route::group([
 
         //Clients
         Route::resource('clients', ClientController::class);
+
+        //Bookings
+        Route::resource('bookings', BookingController::class);
     });
 });
