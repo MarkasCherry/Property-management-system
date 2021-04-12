@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('Properties'))
+@section('title', __('Clients'))
 
 @section('content')
     <x-forms.layout headerTitle="Create Client" redirect="{{ route('clients.index') }}">

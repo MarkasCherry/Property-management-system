@@ -13,4 +13,13 @@ class BookingController extends Controller
 
         return view('bookings.index', compact('bookings'));
     }
+
+    public function create() {
+        return view('bookings.create');
+    }
+
+    public function edit(Booking $booking)
+    {
+        return view('bookings.edit', compact('booking'));
+    }
 }

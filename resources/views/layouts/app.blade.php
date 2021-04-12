@@ -48,7 +48,6 @@
                     </div>
 
                     <div class="toolbar ml-auto">
-
                         @include('layouts.header.mode-switch')
                     </div>
                 </div>
