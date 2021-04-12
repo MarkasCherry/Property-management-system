@@ -9,7 +9,7 @@ class BookingController extends Controller
 {
     public function index()
     {
-        $bookings = Booking::all()->sortByDesc('created_at');
+        $bookings = Booking::latest()->paginate(25);
 
         return view('bookings.index', compact('bookings'));
     }

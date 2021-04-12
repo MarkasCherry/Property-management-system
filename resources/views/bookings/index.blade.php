@@ -246,6 +246,9 @@
                         @endforeach
                     </div>
                 </div>
+
+                {{ $bookings->onEachSide(1)->links('vendor.pagination.default') }}
+
             </div>
         </div>
     </div>
