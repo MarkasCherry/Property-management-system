@@ -167,32 +167,28 @@
                                             <span data-filter-match>{{ $booking->code }}</span>
                                         </span>
                                     </div>
-                                    <div class="meta-right" style="justify-content: center">
-
+                                    <div class="meta-right">
+                                        <span class="tag is-rounded is-elevated m-r-50" style="background-color: {{ $booking->status->color }};"
+                                              data-filter-match>{{ $booking->status->name }}
+                                        </span>
                                         <div class="stats">
                                             <div class="stat m-l-20 m-r-20">
-                                                <span class="tag is-rounded is-elevated" style="background-color: {{ $booking->status->color }}"
-                                                      data-filter-match>{{ $booking->status->name }}
-                                                </span>
-                                                <span>{{ __('Status') }}</span>
-                                            </div>
-                                            <div class="stat m-l-20 m-r-20">
-                                                <span>{{ $booking->booked_from }}</span>
+                                                <span style="font-size: 14px">{{ $booking->booked_from }}</span>
                                                 <span>{{ __('Booked from') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span>{{ $booking->booked_to }}</span>
+                                                <span style="font-size: 14px" >{{ $booking->booked_to }}</span>
                                                 <span>{{ __('Booked to') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span>£{{ $booking->deposit_paid }}</span>
+                                                <span style="font-size: 14px" >£{{ $booking->deposit_paid }}</span>
                                                 <span>{{ __('Deposit paid') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span>£{{ $booking->price }}</span>
+                                                <span style="font-size: 14px">£{{ $booking->price }}</span>
                                                 <span>{{ __('Price') }}</span>
                                             </div>
                                         </div>
