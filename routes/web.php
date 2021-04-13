@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\MediaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
@@ -36,6 +37,11 @@ Route::group([
 
         //Users
         Route::resource('users', UserController::class);
+
+        //Media
+        Route::get('media/{modelId}/{modelName}', [MediaController::class, 'index'])->name('media.index');
+        Route::post('media/delete', [MediaController::class, 'destroy'])->name('media.destroy');
+        Route::post('media/{modelId}/{modelName}/create', [MediaController::class, 'create'])->name('media.create');
 
         //Properties
         Route::resource('properties', PropertyController::class);

@@ -49,7 +49,6 @@ class BookingComponent extends Component
     public function store()
     {
         $this->validate();
-
 //        $client = Client::create([
 //            'name' => $this->name,
 //            'lastname' => $this->lastname,
