@@ -1,7 +1,7 @@
 /*! functions.js | Huro | Css ninja 2020-2021 */
 "use strict"; //Set environment variable (Used for development and demo)
 
-/* 
+/*
     Possible values:
     1. development
     2. customization
