@@ -136,12 +136,12 @@
                                         </div>
                                     </div>
                                 </header>
+
                                 <div class="card-image">
                                     <figure class="image is-16by9">
                                         <img
-                                            src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                            data-demo-src="https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                            alt="">
+                                            src="{{ $property->getMedia()->first() ? $property->getMedia()->first()->getUrl() : asset('assets/img/placeholders/placeholder.png')}}"
+                                            alt="{{ $property->name }}">
                                     </figure>
                                 </div>
                                 <div class="card-content h-40">

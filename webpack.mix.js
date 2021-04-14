@@ -25,5 +25,7 @@ mix.js('resources/js/app.js', 'public/assets/js')
 
 mix.copy('node_modules/notyf/notyf.min.js', 'public/assets/libraries/js/notyf/notyf.min.js');
 mix.copy('node_modules/notyf/notyf.min.js', 'public/assets/libraries/css/notyf/notyf.min.css');
+mix.copy('node_modules/dropzone/dist/min/dropzone.min.css', 'public/assets/libraries/css/dropzone/dropzone.min.css');
 
 mix.js('resources/js/remember-tab.js', 'public/assets/js');
+mix.js('resources/js/media.js', 'public/assets/js');

@@ -25,6 +25,8 @@
     },
     "name": "base-application",
     "dependencies": {
-        "notyf": "^3.9.0"
+        "dropzone": "^5.9.2",
+        "notyf": "^3.9.0",
+        "sortablejs": "^1.13.0"
     }
 }

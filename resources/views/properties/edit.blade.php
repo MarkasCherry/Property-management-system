@@ -60,11 +60,7 @@
             </x-slot>
 
             <x-slot name="media">
-                <form method="post" action="{{ route('properties.updateMedia', $property) }}">
-                    @csrf
-                    @method('PUT')
-                    <x-buttons.form-submit title="{{ __('Save media') }}"></x-buttons.form-submit>
-                </form>
+                <x-forms.media :model="'App_Models_Property'" :modelId="$property->id"></x-forms.media>
             </x-slot>
 
             <x-slot name="amenities">
@@ -99,6 +95,10 @@
 
 @push('scripts')
     <script>
+        media("App_Models_Property", {{ $property->id }});
+    </script>
+
+    <script>
         var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
             removeItemButton: true,
         });
@@ -109,10 +109,6 @@
             var input = document.getElementById('address');
             new google.maps.places.Autocomplete(input);
         }
-    </script>
-
-    <script>
-        lightGallery(document.getElementById('lightgallery'));
     </script>
 
     <script>

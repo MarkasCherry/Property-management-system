@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ mix('assets/libraries/css/notyf/notyf.min.css') }}">
-    <link rel="stylesheet" href="{{ mix('assets/libraries/css/notyf/notyf.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libraries/css/dropzone/dropzone.min.css') }}">
     @stack('styles_after')
 
     <!-- Custom styles -->
@@ -74,7 +74,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-
 <script src="{{ mix('assets/libraries/js/notyf/notyf.min.js') }}"></script>
 <script src="{{ mix('assets/js/app.js') }}" defer></script>
 
@@ -82,6 +81,7 @@
 <script src="{{ asset('assets/libraries/js/functions.js') }}"></script>
 <script src="{{ asset('assets/libraries/js/main.js') }}"></script>
 <script src="{{ asset('assets/js/remember-tab.js') }}"></script>
+<script src="{{ asset('assets/js/media.js') }}"></script>
 
 @stack('scripts')
 
