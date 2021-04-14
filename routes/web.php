@@ -28,42 +28,40 @@ Route::group([
         'verified'
     ],
 ], function () {
-    Route::prefix('admin')->group(function() {
-        //Dashboard
-        Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+    //Dashboard
+    Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 
-        //Roles
-        Route::resource('roles', RoleController::class);
+    //Roles
+    Route::resource('roles', RoleController::class);
 
-        //Users
-        Route::resource('users', UserController::class);
+    //Users
+    Route::resource('users', UserController::class);
 
-        //Media
-        Route::get('media/{modelId}/{modelName}', [MediaController::class, 'index'])->name('media.index');
-        Route::post('media/delete', [MediaController::class, 'destroy'])->name('media.destroy');
-        Route::post('media/{modelId}/{modelName}/create', [MediaController::class, 'create'])->name('media.create');
+    //Media
+    Route::get('media/{modelId}/{modelName}', [MediaController::class, 'index'])->name('media.index');
+    Route::post('media/delete', [MediaController::class, 'destroy'])->name('media.destroy');
+    Route::post('media/{modelId}/{modelName}/create', [MediaController::class, 'create'])->name('media.create');
 
-        //Properties
-        Route::resource('properties', PropertyController::class);
-        Route::put('properties/{property}/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
-        Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
-        Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
-        Route::put('properties/{property}/updateAmenities', [PropertyController::class, 'updateAmenities'])->name('properties.updateAmenities');
-        Route::get('properties/{property}/add-room', [PropertyController::class, 'addRoom'])->name('properties.addRoom');
-        Route::post('properties/{property}/add-room', [PropertyController::class, 'storeRoom'])->name('properties.storeRoom');
+    //Properties
+    Route::resource('properties', PropertyController::class);
+    Route::put('properties/{property}/updateDescription', [PropertyController::class, 'updateDescription'])->name('properties.updateDescription');
+    Route::put('properties/{property}/updateMedia', [PropertyController::class, 'updateMedia'])->name('properties.updateMedia');
+    Route::put('properties/{property}/updateSeo', [PropertyController::class, 'updateSeo'])->name('properties.updateSeo');
+    Route::put('properties/{property}/updateAmenities', [PropertyController::class, 'updateAmenities'])->name('properties.updateAmenities');
+    Route::get('properties/{property}/add-room', [PropertyController::class, 'addRoom'])->name('properties.addRoom');
+    Route::post('properties/{property}/add-room', [PropertyController::class, 'storeRoom'])->name('properties.storeRoom');
 
-        //Rooms
-        Route::resource('rooms', RoomController::class);
-        Route::put('rooms/{room}/updateMedia', [RoomController::class, 'updateMedia'])->name('rooms.updateMedia');
-        Route::put('rooms/{room}/updateSeo', [RoomController::class, 'updateSeo'])->name('rooms.updateSeo');
+    //Rooms
+    Route::resource('rooms', RoomController::class);
+    Route::put('rooms/{room}/updateMedia', [RoomController::class, 'updateMedia'])->name('rooms.updateMedia');
+    Route::put('rooms/{room}/updateSeo', [RoomController::class, 'updateSeo'])->name('rooms.updateSeo');
 
-        //Facilities
-        Route::resource('amenities', AmenityController::class);
+    //Facilities
+    Route::resource('amenities', AmenityController::class);
 
-        //Clients
-        Route::resource('clients', ClientController::class);
+    //Clients
+    Route::resource('clients', ClientController::class);
 
-        //Bookings
-        Route::resource('bookings', BookingController::class);
-    });
+    //Bookings
+    Route::resource('bookings', BookingController::class);
 });

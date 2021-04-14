@@ -7,7 +7,7 @@ media = function (model, modelId) {
             var myDropzone = this;
 
             $.ajax({
-                url: '/admin/media/' + modelId + '/' + model,
+                url: '/media/' + modelId + '/' + model,
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
@@ -34,7 +34,7 @@ media = function (model, modelId) {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
                         type: 'POST',
-                        url: '/admin/media/delete',
+                        url: '/media/delete',
                         data: {fileId: file.id},
                         error: function (e) {
                             console.log(e);
