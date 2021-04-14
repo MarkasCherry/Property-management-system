@@ -140,7 +140,7 @@
                                 <div class="card-image">
                                     <figure class="image is-16by9">
                                         <img
-                                            src="{{ $property->getMedia()->first() ? $property->getMedia()->first()->getUrl() : asset('assets/img/placeholders/placeholder.png')}}"
+                                            src="{{ $property->getMedia()->first() ? $property->getMedia()->first()->getUrl() : asset('assets/img/placeholders/placeholder.png') }}"
                                             alt="{{ $property->name }}">
                                     </figure>
                                 </div>

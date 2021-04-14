@@ -66,11 +66,7 @@
             </x-slot>
 
             <x-slot name="media">
-                <form method="post" action="{{ route('rooms.updateMedia', $room) }}">
-                    @csrf
-                    @method('PUT')
-                    <x-buttons.form-submit title="{{ __('Save media') }}"></x-buttons.form-submit>
-                </form>
+                <x-forms.media :model="'App_Models_Room'" :modelId="$room->id"></x-forms.media>
             </x-slot>
 
 {{--            <x-slot name="amenities">--}}
@@ -98,12 +94,15 @@
             <x-slot name="seoSettings">
                 <x-forms.seo-settings action="{{ route('rooms.updateSeo', $room) }}" :model="$room"></x-forms.seo-settings>
             </x-slot>
-
         </x-ui.tabs>
     </x-forms.layout>
 @endsection
 
 @push('scripts')
+    <script>
+        media("App_Models_Room", {{ $room->id }});
+    </script>
+
     <script>
         var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
             removeItemButton: true,

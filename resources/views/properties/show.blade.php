@@ -55,7 +55,9 @@
                             @forelse($property->rooms as $room)
                                 <div class="list-view-item">
                                     <div class="list-view-item-inner">
-                                        <img style="max-height: unset" src="{{ asset('https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') }}" alt="">
+                                        <img style="max-height: unset"
+                                             src="{{ $room->getMedia()->first() ? $room->getMedia()->first()->getUrl() : asset('assets/img/placeholders/placeholder.png') }}"
+                                             alt="{{ $room->room_number }}">
                                         <div class="meta-left">
                                             <h3>
                                                 <span data-filter-match>{{ $room->name }}</span>
