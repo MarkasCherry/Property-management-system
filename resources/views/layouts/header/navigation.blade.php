@@ -155,6 +155,11 @@
                     <i data-feather="home"></i>
                     <span>{{ __('Properties') }}</span>
                 </a>
+                <a href="{{ route('bookings.index') }}" id="dashboards-navbar-menu"
+                   class="centered-link">
+                    <i data-feather="book"></i>
+                    <span>{{ __('Bookings') }}</span>
+                </a>
                 <a href="{{ route('clients.index') }}" id="dashboards-navbar-menu"
                    class="centered-link">
                     <i data-feather="users"></i>
