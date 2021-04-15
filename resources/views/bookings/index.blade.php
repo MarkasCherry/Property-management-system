@@ -124,12 +124,12 @@
                 </div>
 
                 <div class="buttons">
-                    <button class="button h-button is-primary is-elevated">
+                    <a href="{{ route('bookings.create') }}" class="button h-button is-primary is-elevated">
                                 <span class="icon">
-                                        <i class="fas fa-check"></i>
+                                        <i class="fas fa-plus"></i>
                                     </span>
-                        <span>Approve</span>
-                    </button>
+                        <span>{{ __('Add booking') }}</span>
+                    </a>
                 </div>
             </div>
 

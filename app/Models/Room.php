@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
+/**
+ * @method static active()
+ */
 class Room extends Model implements HasMedia
 {
     use SoftDeletes, InteractsWithMedia;

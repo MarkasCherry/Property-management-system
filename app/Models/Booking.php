@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property mixed code
+ * @property mixed deposit_paid
+ * @property mixed booked_to
+ * @property mixed is_paid
+ * @property mixed client_id
+ * @property mixed room_id
+ * @property mixed booked_from
+ * @property mixed price
+ * @property mixed status_id
  */
 class Booking extends Model
 {
