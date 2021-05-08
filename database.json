@@ -25,7 +25,7 @@
                 {
                     "name": "Hot tub",
                     "active": true,
-                    "font_awesome": "fas fa-hot-tub"
+                    "font_awesome": "fas fa-swimming-pool"
                 },
                 {
                     "name": "Taxi service",
@@ -468,6 +468,233 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Arashiyama BENKEI",
+            "rating": "4",
+            "address": "34 Sagatenryuji Susukinobabacho, Ukyo-Ku, Kyoto 616-8385 Kyoto Prefecture",
+            "short_description": "Welcome Arashiyama Benkei was established in 1969 on the historical and scenic land known as Arashiyama. Thriving spring cherry blossoms, red autumn leaves blanketing the mountains, and cultural and historic landmarks give Arashiyama the distinction of being one of Japan’s leading sightseeing destinations. Just upstream from (west of) the Togetsu-kyo Bridge, which marks the center of the area, and situated alongside the murmurs of the Oi River, is Arashiyama Benkei.",
+            "long_description": "Welcome Arashiyama Benkei was established in 1969 on the historical and scenic land known as Arashiyama. Thriving spring cherry blossoms, red autumn leaves blanketing the mountains, and cultural and historic landmarks give Arashiyama the distinction of being one of Japan’s leading sightseeing destinations. Just upstream from (west of) the Togetsu-kyo Bridge, which marks the center of the area, and situated alongside the murmurs of the Oi River, is Arashiyama Benkei. Our ryokan accommodations, built in the traditional sukiya-zukuri architecture style reminiscent of antique tea houses, is not simply a place to rest and eat, but also houses facilities in which guests can enjoy Arashiyama onsen (hot springs) and indulge in traditional Kyoto cuisine. Please visit us to experience the utmost in comfort and relaxation. -Rooms- Arashiyama Benkei is honored to provide 10 guest rooms, each with their own individual charm. Each room is thoughtfully designed and furnished in the Japanese style, featuring views of the Arashiyama mountains or our lush garden. Cherry blossoms in spring, cormorant fishing in summer, cascading colors of maple leaves in autumn, and a dusting of snow in winter. Our guests are certain to enjoy a peaceful stay among the beauty and stillness of this unique Kyoto scenery. -Onsen- Arashiyama onsen (hot spring) water has a pH of 8.3 and provides an exceptionally smooth touch that is said to beautify skin and wash away any travel fatigue. Benkei has indoor and open-air baths; both are available for men and women and are separated by gender. Guests who prefer to enjoy a bath in private may reserve a secluded open-air bathtub (same-day reservation, \\2,160/group/45 minutes). -Cuisine- Guests at Benkei indulge in traditional multi-course kaiseki fare that uses seasonal ingredients found not only in Kyoto, but sourced from all over Japan. We take care in creating cuisine that appeals to all palates, yet maintains respect for the tenets of traditional Kyoto cooking. -Day Trips- Day trip guests at Benkei may also opt to enjoy a relaxing bath in addition to a gourmet meal. Reservations are required for combined onsen and dining day trips. The facilities open at 11:30 a.m. We offer full plans that include meals in private room (2 hours for bento meals or 3 hours for full-course kaiseki meals), baths, towels, and yukata robe, as well as more informal plans that include a restaurant meal in the open space and onsen bath.\n",
+            "active": true,
+            "public": true,
+            "seo_h1_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+            "seo_meta_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+            "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+            "amenities": [
+                {
+                    "name": "Taxi service",
+                    "active": true,
+                    "font_awesome": "fas fa-taxi"
+                },
+                {
+                    "name": "Parking",
+                    "active": true,
+                    "font_awesome": "fas fa-parking"
+                },
+                {
+                    "name": "Hot tub",
+                    "active": true,
+                    "font_awesome": "fas fa-swimming-pool"
+                },
+                {
+                    "name": "Spa",
+                    "active": true,
+                    "font_awesome": "fas fa-spa"
+                },
+                {
+                    "name": "Free WiFi",
+                    "active": true,
+                    "font_awesome": "fas fa-wifi"
+                },
+                {
+                    "name": "24/7 security",
+                    "active": true,
+                    "font_awesome": "fas fa-shield-alt"
+                },
+                {
+                    "name": "Landmarks",
+                    "active": true,
+                    "font_awesome": "fas fa-torii-gate"
+                },
+                {
+                    "name": "Restaurant",
+                    "active": true,
+                    "font_awesome": "fas fa-utensils"
+                },
+                {
+                    "name": "Room service",
+                    "active": true,
+                    "font_awesome": "fas fa-concierge-bell"
+                },
+                {
+                    "name": "Air conditioning",
+                    "active": true,
+                    "font_awesome": "far fa-snowflake"
+                },
+                {
+                    "name": "Non-smoking rooms",
+                    "active": true,
+                    "font_awesome": "fas fa-smoking-ban"
+                }
+            ],
+            "media": [
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/1c/34/21/83/exterior-at-night.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/02/98/f5/6a/filename-02-jpg-thumbnail0.jpg"
+                },
+                {
+                    "url": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/238492506.jpg?k=df0edc16b7b0a6e1ac76545701f73d863225d0242cf48d5bd6b25429a222d04b&o=&hp=1"
+                },
+                {
+                    "url": "https://cf.bstatic.com/xdata/images/hotel/max1280x900/13659131.jpg?k=5500062511456e7e5069c605b2055b923f70ffc5d49e3ea6af4079a10179b95a&o=&hp=1"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/oyster/1850/0c/3f/58/1c/japanese-room-with-12-tatami-mats.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-w/0a/a9/d9/4f/spring-in-arashiyama.jpg"
+                }
+            ],
+            "rooms": [
+                {
+                    "name": "Ashita",
+                    "room_number": "A1",
+                    "capacity": 1,
+                    "bed_count": 1,
+                    "bathroom_count": 0,
+                    "short_description": "Celestine Deluxe Higashiyama “Spirit of Kyoto” is the theme of this suite. The bright natural light seeps through the Japanese paper and wraps the room in a cool, pale light. This deluxe suite has been intricately designed with calming colors.",
+                    "long_description": "Celestine Deluxe Higashiyama “Spirit of Kyoto” is the theme of this suite. The bright natural light seeps through the Japanese paper and wraps the room in a cool, pale light. This deluxe suite has been intricately designed with calming colors.\n\nBasic Information\nRoom Size\t63.8㎡〜66.2㎡\tOccupancy\t1〜2persons\tBed\tW 1,400mm × 2\nAppendix\t・In terms of payment procedure, a credit card guarantee or a cash deposit of approx. 150% is required upon your checking in as a security reason.\nFull payment is required upon checking out included refunding a cash deposit.\n・All rooms are non-smoking間取り拡大\nAmenities\nMedia and equipment\n\n42 inch plus plasma television\nUSB / HDMI AV equipment with electrical outlet\nSafe\nFree morning newspaper service (Japanese / English)\nPersonal care\n\nDryer\nBathrobe\nTHEMAE bath amenities\nIron, ironing board\nRefreshments\n\nNespresso coffee machine\nMini bar (additional charges apply)\nIppodo green tea",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-higashiyama/slide_01.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-higashiyama/slide_02.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-higashiyama/slide_04.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-higashiyama/slide_05.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Suigetsu",
+                    "room_number": "B1",
+                    "capacity": 3,
+                    "bed_count": 2,
+                    "bathroom_count": 1,
+                    "short_description": "The theme is \"TEA ROOM\". Experience the special welcoming style of Gion by enjoying green tea powder from Ippodo, a Kyoto shop specializing in tea that has been around for a long time. Enjoy the authentic flavor of Japanese green tea with us!",
+                    "long_description": "The theme is \"TEA ROOM\". Experience the special welcoming style of Gion by enjoying green tea powder from Ippodo, a Kyoto shop specializing in tea that has been around for a long time. Enjoy the authentic flavor of Japanese green tea with us!\n\nBasic Information\nRoom Size\n61.0㎡〜61.3㎡\nOccupancy\n1〜2persons\nBed\nW 1,230mm × 2\nAppendix\n・In terms of payment procedure, a credit card guarantee or a cash deposit of approx. 150% is required upon your checking in as a security reason.\nFull payment is required upon checking out included refunding a cash deposit.\n・All rooms are non-smoking\n間取り拡大\nAmenities\nMedia and equipment\n\n42 inch plus plasma television\nUSB / HDMI AV equipment with electrical outlet\nSafe\nFree morning newspaper service (Japanese / English)\nPersonal care\n\nDryer\nBathrobe\nTHEMAE bath amenities\nIron, ironing board\nRefreshments\n\nNespresso coffee machine\nMini bar (additional charges apply)\nIppodo green tea",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-yasaka/slide_01.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-yasaka/slide_02.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-yasaka/slide_03.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-junior-suite-celestine-yasaka/slide_05.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Madara",
+                    "room_number": "C1",
+                    "capacity": 2,
+                    "bed_count": 1,
+                    "bathroom_count": 1,
+                    "short_description": "This cozy and spacious room promises to provide a supreme moment. The suite has been divided into three sections, with a separate room for a bath and toilet. Please take your shoes off and make yourself at home!",
+                    "long_description": "This cozy and spacious room promises to provide a supreme moment. The suite has been divided into three sections, with a separate room for a bath and toilet. Please take your shoes off and make yourself at home!\n\nBasic Information\nRoom Size\n43.0㎡\nOccupancy\n1〜2persons\nBed\nW 1,230mm × 2\nAppendix\n・In terms of payment procedure, a credit card guarantee or a cash deposit of approx. 150% is required upon your checking in as a security reason.\nFull payment is required upon checking out included refunding a cash deposit.\n・All rooms are non-smoking\n間取り拡大\nAmenities\nMedia and equipment\n\n42 inch plus plasma television\nUSB / HDMI AV equipment with electrical outlet\nSafe\nFree morning newspaper service (Japanese / English)\nPersonal care\n\nDryer\nBathrobe\nTHEMAE bath amenities\nIron, ironing board\nRefreshments\n\nNespresso coffee machine\nMini bar (additional charges apply)\nIppodo green tea",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-executive-twin/slide_01.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-executive-twin/slide_02.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-executive-twin/slide_03.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-executive-twin/slide_04.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Hashirama",
+                    "room_number": "D1",
+                    "capacity": 3,
+                    "bed_count": 3,
+                    "bathroom_count": 2,
+                    "short_description": "A functional room that can provide elderly guests and those in wheelchairs, with a safe and comfortable time at the hotel.",
+                    "long_description": "A functional room that can provide elderly guests and those in wheelchairs, with a safe and comfortable time at the hotel.\n\nBasic Information\nRoom Size\n30.5㎡\nOccupancy\n1〜2persons\nBed\nW 1,230mm × 2\nAppendix\n・In terms of payment procedure, a credit card guarantee or a cash deposit of approx. 150% is required upon your checking in as a security reason.\nFull payment is required upon checking out included refunding a cash deposit.\n・All rooms are non-smoking\n間取り拡大\nAmenities\nMedia and equipment\n\n42 inch plus plasma television\nAUSB / HDMI AV equipment with electrical outlet\nSafe\nFree morning newspaper service (Japanese / English)\nPersonal care\n\nDryer\nBathrobe\nTHEMAE bath amenities\nIron, ironing board\nRefreshments\n\nNespresso coffee machine\nMini bar (additional charges apply)\nIppodo green tea",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-accessible-twin/slide_01.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-accessible-twin/slide_02.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-accessible-twin/slide_03.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-accessible-twin/slide_05.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Uzumaki",
+                    "room_number": "E1",
+                    "capacity": 3,
+                    "bed_count": 2,
+                    "bathroom_count": 1,
+                    "short_description": "The Superior Queen is larger than the Moderate Queen, which gives impression of being more relaxed for your precious stay. The unpromising designed amenities are provided with the theme of \"Simple yet Surprising\"",
+                    "long_description": "The Superior Queen is larger than the Moderate Queen, which gives impression of being more relaxed for your precious stay. The unpromising designed amenities are provided with the theme of \"Simple yet Surprising\"\n\nBasic Information\nRoom Size\n28.2㎡〜31.7㎡\nOccupancy\n1〜2persons\nBed\nW 1,640mm × 1\nAppendix\n・In terms of payment procedure, a credit card guarantee or a cash deposit of approx. 150% is required upon your checking in as a security reason.\nFull payment is required upon checking out included refunding a cash deposit.\n・All rooms are non-smoking\n間取り拡大\nAmenities\nMedia and equipment\n\n42 inch plus plasma television\nUSB / HDMI AV equipment with electrical outlet\nSafe\nFree morning newspaper service (Japanese / English)\nPersonal care\n\nDryer\nBathrobe\nTHEMAE bath amenities\nIron, ironing board\nRefreshments\n\nNespresso coffee machine\nMini bar (additional charges apply)\nIppodo green tea",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Arashiyama BENKEI | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-superior-queen/slide_01.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-superior-queen/slide_03.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-superior-queen/slide_02.jpg"
+                        },
+                        {
+                            "url": "https://www.celestinehotels.jp/images/kyoto-gion/rooms/r-superior-queen/slide_04.jpg"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
+
