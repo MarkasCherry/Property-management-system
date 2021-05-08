@@ -1,0 +1,473 @@
+{
+    "properties": [
+        {
+            "name": "Toshiharu Ryokan",
+            "rating": "5",
+            "address": "326 Benzaitencho, Matsubarasagaru, Suwancho-Dori, Shimogyo-Ku, Kyoto 600-8428 Kyoto Prefecture",
+            "short_description": "See why so many travelers make Toshiharu Ryokan their ryokan of choice when visiting Kyoto. Providing an ideal mix of value, comfort and convenience, it offers a romantic setting with an array of amenities designed for travelers like you.",
+            "long_description": "See why so many travelers make Toshiharu Ryokan their ryokan of choice when visiting Kyoto. Providing an ideal mix of value, comfort and convenience, it offers a romantic setting with an array of amenities designed for travelers like you.\n\nClose to some of Kyoto's most popular landmarks, such as Kyoto Station Building (0.9 mi) and Sannenzaka Ninenzaka (1.3 mi), Toshiharu Ryokan is a great destination for tourists.\n\nAs your “home away from home,” the ryokan rooms offer a flat screen TV and air conditioning, and getting online is easy, with free wifi available.\n\nGuests have access to a concierge, baggage storage, and a convenience store while staying at Toshiharu Ryokan. In addition, Toshiharu Ryokan offers a hot tub and breakfast, which will help make your Kyoto trip additionally gratifying. And, as an added convenience, there is parking available to guests.\n\nDuring your visit, be sure to check out one of Kyoto's popular shrimp restaurants such as Sushi no Musashi JR Kyoto Station 8-jo Entrance, Katsukura, Kyoto Station Bldg The Cube, and Musashi Sushi, all a short distance from Toshiharu Ryokan.\n\nIf you’re looking for something to do, Nishiki Market (0.5 mi), Gion (1.0 mi), and Kyoto National Museum (1.0 mi) are a nice way to spend some time, and they are all within walking distance of Toshiharu Ryokan.\n\nAt Toshiharu Ryokan, your comfort and satisfaction come first, and they look forward to welcoming you to Kyoto.\n\n",
+            "active": true,
+            "public": true,
+            "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+            "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+            "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+            "amenities": [
+                {
+                    "name": "Parking",
+                    "active": true,
+                    "font_awesome": "fas fa-parking"
+                },
+                {
+                    "name": "Free WiFi",
+                    "active": true,
+                    "font_awesome": "fas fa-wifi"
+                },
+                {
+                    "name": "Hot tub",
+                    "active": true,
+                    "font_awesome": "fas fa-hot-tub"
+                },
+                {
+                    "name": "Taxi service",
+                    "active": true,
+                    "font_awesome": "fas fa-taxi"
+                },
+                {
+                    "name": "Baggage storage",
+                    "active": true,
+                    "font_awesome": "fas fa-archive"
+                },
+                {
+                    "name": "Breakfast",
+                    "active": true,
+                    "font_awesome": "fas fa-mug-hot"
+                },
+                {
+                    "name": "Massage",
+                    "active": true,
+                    "font_awesome": "fas fa-spa"
+                },
+                {
+                    "name": "Air conditioning",
+                    "active": true,
+                    "font_awesome": "far fa-snowflake"
+                },
+                {
+                    "name": "Non-smoking rooms",
+                    "active": true,
+                    "font_awesome": "fas fa-smoking-ban"
+                }
+            ],
+            "media": [
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0f/d0/df/d9/tsuki.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0f/d4/35/7b/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0f/d4/34/7b/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0f/d4/2a/7f/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0f/d0/f2/ad/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0f/d0/e0/cf/caption.jpg"
+                }
+            ],
+            "rooms": [
+                {
+                    "name": "Satsuki Room",
+                    "room_number": "F1",
+                    "capacity": 2,
+                    "bed_count": 2,
+                    "bathroom_count": 2,
+                    "short_description": "This room gives you the courtyard by the foyer all to yourself.\nThe room comes with a private washroom and a hori-gotatsu (table placed over a recessed floor) for a relaxing stay.",
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day).\nThe location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel.\nMassage, wake-up call, and courier services are available upon request.",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/satsuki/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/satsuki/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/satsuki/feature_img03.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com//assets/img/rooms/satsuki/layout_img_sp_en.png"
+                        }
+                    ]
+                },
+                {
+                    "name": "Kiku Room",
+                    "room_number": "F2",
+                    "capacity": 4,
+                    "bed_count": 4,
+                    "bathroom_count": 0,
+                    "short_description": "This is the largest room in the hotel, with a front room attached, and an alcove that fills with natural light from the courtyard.\nThe room is decorated with Hina and Gogatsu dolls during the festival season.",
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day). The location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel. Massage, wake-up call, and courier services are available upon request.",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/kiku/feature_img03.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/kiku/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/kiku/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/kiku/layout_img01_en.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tachibana Room",
+                    "room_number": "F3",
+                    "capacity": 2,
+                    "bed_count": 2,
+                    "bathroom_count": 0,
+                    "short_description": "This modern Japanese-style room was renovated from a storehouse designated as a Tangible Cultural Property of Japan.\nSeparated from the main building by a courtyard, it comes with its own shower room.",
+                    "active": true,
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day).\nThe location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel.\nMassage, wake-up call, and courier services are available upon request.",
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tachibana/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tachibana/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tachibana/layout_img01_en.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tsuki Room",
+                    "room_number": "F4",
+                    "capacity": 2,
+                    "bed_count": 2,
+                    "bathroom_count": 0,
+                    "short_description": "This room is modelled after the Katsura Imperial Villa, a Japanese architectural masterpiece.\nThere is a front room attached, and on the south and east sides are vintage nami-uchi glass windows that look out onto the courtyard",
+                    "active": true,
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day). The location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel. Massage, wake-up call, and courier services are available upon request.",
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tsuki/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tsuki/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tsuki/feature_img03.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/tsuki/layout_img01_en.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Take Room",
+                    "room_number": "F5",
+                    "capacity": 4,
+                    "bed_count": 4,
+                    "bathroom_count": 1,
+                    "short_description": "With a view looking down at the courtyard, this an appealing room with beautiful wooden pillars,\npreviously featured on the NHK art programme “Bi no Tsubo”.",
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day). The location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel. Massage, wake-up call, and courier services are available upon request.",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/take/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/take/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/take/layout_img01_en.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Ume Room",
+                    "room_number": "F6",
+                    "capacity": 4,
+                    "bed_count": 4,
+                    "bathroom_count": 1,
+                    "short_description": "This is a cozy room with a gorgeous ajiro ceiling.\nWhile there’s no view of the courtyard, the two windows provide soft, natural lighting.\n\n",
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day). The location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel. Massage, wake-up call, and courier services are available upon request.",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.japan-guide.com/g21/2007_11.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/ume/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/ume/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/ume/layout_img01_en.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Matsu Room",
+                    "room_number": "F7",
+                    "capacity": 1,
+                    "bed_count": 1,
+                    "bathroom_count": 0,
+                    "short_description": "A renovated chashitsu (tea room), this room is cozy and tasteful.\nWhile there’s no view of the courtyard, you can appreciate the time of year with the seasonal scrolls and flowers that adorn the room’s alcove.",
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day). The location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel. Massage, wake-up call, and courier services are available upon request.",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/132570395.jpg?k=7979726255f9e010f7bbd0263bcd9ed91871c84fe2f29895ab8d155f9b02ba06&o="
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/matsu/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/matsu/layout_img01_en.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Aoi Room",
+                    "room_number": "F8",
+                    "capacity": 2,
+                    "bed_count": 2,
+                    "bathroom_count": 1,
+                    "short_description": "This room was renovated from a storehouse designated as a Tangible Cultural Property of Japan.\nSeparated from the main building by a courtyard, and featuring exposed wooden beams, the storehouse provides a calm space to stay.",
+                    "long_description": "Our Rooms\nAll our rooms come with free Wi-Fi, a television, phone, desk lamp, dresser, tea set, basic lockbox, hairdryer, bathrobes, and slippers.\n\nWashrooms & Baths\nOur washrooms and bathrooms have toothbrushes, razors, face towels, bath towels, shampoo, conditioner, body soap, and hand soap.\n\nParking Space\nPrivate parking is available for single car (¥1,000/day). The location can be found on our Access page.\n\nNotice\nSmoking is prohibited inside the hotel. Massage, wake-up call, and courier services are available upon request.",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Toshiharu Ryokan | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/aoi/feature_img01.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/aoi/feature_img02.jpg"
+                        },
+                        {
+                            "url": "https://www.14haru.com/assets/img/rooms/aoi/layout_img01_en.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Luck You Kyoto",
+            "rating": "3",
+            "address": "590-16 Kakimotocho Kuromondori Gojoagaru, Shimogyo-Ku, Kyoto 600-8357 Kyoto Prefecture",
+            "short_description": "A new Machiya townhouse in which to spend a pleasant time. While exuding the traditional aesthetic sensibility of Kyoto, its lodges allow for a pleasant space in which to feel the passing of each season. This is . ",
+            "long_description": "A new Machiya townhouse in which to spend a pleasant time. While exuding the traditional aesthetic sensibility of Kyoto, its lodges allow for a pleasant space in which to feel the passing of each season. This is . While still based on the classic Machiya design, it incorporates modern facilities in order to offer a true sense of comfort. Also, in accordance to its Japanese name \"楽遊\", it doesn’t forget to hold a “playful spirit”. And so, it offers many programs, activities and exchange events in which you can participate. So be sure to come and stay at , an old-style Kyoto house in which to feel at ease. ●Check-In:16:00(We can take your luggage prior to check-in.) / Check-Out:11:00 ●There is no curfew. ●Front Desk Hours: 7:00~23:00 ●A request for our overseas guests: allow us to make a copy of your passport information when you check in. ●Food: breakfast service is included in your payment. We do not offer dinner service. ●Parking: please use the nearby coin parking as we do not have a parking lot. ●Smoking Areas: Our entire inn is non-smoking. We ask that you please cooperate. ●Rental Bicycle: You may rent a bicycle from us for 1000 yen per day. We only have a limited number, so please reserve one as soon as possible.",
+            "active": true,
+            "public": true,
+            "seo_h1_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+            "seo_meta_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+            "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+            "amenities": [
+                {
+                    "name": "Children Activities",
+                    "active": true,
+                    "font_awesome": "fas fa-child"
+                },
+                {
+                    "name": "Free WiFi",
+                    "active": true,
+                    "font_awesome": "fas fa-wifi"
+                },
+                {
+                    "name": "Bicycle rental",
+                    "active": true,
+                    "font_awesome": "fas fa-bicycle"
+                },
+                {
+                    "name": "Baggage storage",
+                    "active": true,
+                    "font_awesome": "fas fa-archive"
+                },
+                {
+                    "name": "Free Breakfast",
+                    "active": true,
+                    "font_awesome": "fas fa-mug-hot"
+                },
+                {
+                    "name": "Refrigerator",
+                    "active": true,
+                    "font_awesome": "fas fa-utensils"
+                },
+                {
+                    "name": "Air conditioning",
+                    "active": true,
+                    "font_awesome": "far fa-snowflake"
+                },
+                {
+                    "name": "Non-smoking rooms",
+                    "active": true,
+                    "font_awesome": "fas fa-smoking-ban"
+                }
+            ],
+            "media": [
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-w/0b/fe/8c/32/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-w/0b/fe/8c/39/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0c/f3/4d/23/2.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0b/fe/8c/3a/caption.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0c/f3/4d/29/5.jpg"
+                },
+                {
+                    "url": "https://media-cdn.tripadvisor.com/media/photo-o/0b/fe/8c/3b/caption.jpg"
+                }
+            ],
+            "rooms": [
+                {
+                    "name": "Hana: Triple Room with a Garden View",
+                    "room_number": "101",
+                    "capacity": 3,
+                    "bed_count": 3,
+                    "bathroom_count": 2,
+                    "short_description": "Grand Opening of the Kyomachiya Luck You Horikawa Gojo [Annex] on April 17, 2020 (Friday)! The room is adjacent to “Horsetail Garden”, named after the garden’s thick growth of horsetail. The serene pocket of nature adds an open, spacious feel to the room. The garden is accented by small, stone lanterns. The bathroom in this room is larger than the bathrooms in the other rooms, and is recommended for families with small children.",
+                    "long_description": "Grand Opening of the Kyomachiya Luck You Horikawa Gojo [Annex] on April 17, 2020 (Friday)! The room is adjacent to “Horsetail Garden”, named after the garden’s thick growth of horsetail. The serene pocket of nature adds an open, spacious feel to the room. The garden is accented by small, stone lanterns. The bathroom in this room is larger than the bathrooms in the other rooms, and is recommended for families with small children. Room Size#101 Deluxe HANA 20.56 ㎡\nCapacity1～3 people\nTypeSeparate toilet and bathroom, breakfast included\nWiFiFree WiFi available throughout the building\nFacilitiesAir conditioning, bathroom, toilet (bidet), closet, TV (local channels only), fridge, safety box, dryer, handy-phone (a portable smartphone that you can use during your stay)\nAmenitiesShampoo, conditioner, hand cream, toothbrush, brush, razor, cue tips, towels, handwash soap, bath towels, face towel, roomwear (gauze samue clothing)",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/hana-room2.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/hana-room2.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/hana-room2.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/beknrom_hana-15.png"
+                        }
+                    ]
+                },
+                {
+                    "name": "Shiki: Premium 4-person room",
+                    "room_number": "102",
+                    "capacity": 4,
+                    "bed_count": 2,
+                    "bathroom_count": 3,
+                    "short_description": "Grand Opening of the Kyomachiya Luck You Horikawa Gojo [Annex] on April 17, 2020 (Friday)! 2 walls of the room have large windows. This premier-type room is the largest room we have available and also includes its own shoin (study). Guest Room 102 “Shiki” (Four Seasons) on the 1st floor is adjacent to the [Senryo (Sarcandra glabra herb) Garden]. The garden complements the seasons with an arrangement of senryo, maple, and camellias. The large window in Room 106 on the 2nd floor offers an airy, open feel. Relatively speaking, both rooms are quieter, being located towards the innermost part of the building.\n\n",
+                    "long_description": "Grand Opening of the Kyomachiya Luck You Horikawa Gojo [Annex] on April 17, 2020 (Friday)! 2 walls of the room have large windows. This premier-type room is the largest room we have available and also includes its own shoin (study). Guest Room 102 “Shiki” (Four Seasons) on the 1st floor is adjacent to the [Senryo (Sarcandra glabra herb) Garden]. The garden complements the seasons with an arrangement of senryo, maple, and camellias. The large window in Room 106 on the 2nd floor offers an airy, open feel. Relatively speaking, both rooms are quieter, being located towards the innermost part of the building.\n\n Room Size#102 Premier Shiki 24.22 ㎡、#105 Premier Tsuki 24.22 ㎡\nCapacity1-4 people\nTypeSeparate toilet and bathroom, breakfast included\nWiFiFree WiFi available throughout the building\nFacilitiesAir conditioning, bathroom, toilet (bidet), closet, TV (local channels only), fridge, safety box, dryer, handy-phone (a portable smartphone that you can use during your stay)\nAmenitiesShampoo, conditioner, hand cream, toothbrush, brush, razor, cue tips, towels, handwash soap, bath towels, face towel, roomwear (gauze samue clothing)",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/beknrom_shiki-01-1.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/beknrom_shiki-07-1.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/beknrom_shiki-19.png"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/beknrom_shiki-21-1.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tachibana: Economy 2-person Room",
+                    "room_number": "201",
+                    "capacity": 2,
+                    "bed_count": 1,
+                    "bathroom_count": 1,
+                    "short_description": "This room on the 2nd floor of the main building is the most reasonably priced room with a compact layout. Although the room is small, it is equipped with all the same amenities neccesary for a comfortable stay as all the other rooms. This room is also recommended for long stays.\n\n",
+                    "long_description": "This room on the 2nd floor of the main building is the most reasonably priced room with a compact layout. Although the room is small, it is equipped with all the same amenities neccesary for a comfortable stay as all the other rooms. This room is also recommended for long stays.\n\n Room Size6.98 sq meters\nCapacity1 or 2 people\nType’unit bath’ (toilet, sink and bathroom in a single room)/breakfast included\nWiFiFree WiFi available throughout the building\nFacilitiesAir conditioning, bathroom, toilet (bidet), closet, TV (local channels only), fridge, safety box, dryer, handy-phone (a portable smartphone that you can use during your stay)\nAmenitiesShampoo, conditioner, handwashing soap, bath towels, face towels, roomwear (gauze samue clothing) ※Please notify the front desk if you need a toothbrush",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/MG_3084-ae-1.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/72380986.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/shiki9.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/72380985.jpg"
+                        }
+                    ]
+                },
+                {
+                    "name": "Tsubaki: Standard 2-person Room",
+                    "room_number": "202",
+                    "capacity": 2,
+                    "bed_count": 2,
+                    "bathroom_count": 1,
+                    "short_description": "This is a spacious 4.5 mat room at the back of the second floor of the main building, with a front room for storing luggage. This room is popular with those who want to stay in a simple and comfortable room, suitable for two people or those who are traveling alone.",
+                    "long_description": "This is a spacious 4.5 mat room at the back of the second floor of the main building, with a front room for storing luggage. This room is popular with those who want to stay in a simple and comfortable room, suitable for two people or those who are traveling alone. Room Size6.98 sq meters\nCapacity1 or 2 people\nType’unit bath’ (toilet, sink and bathroom in a single room)/breakfast included\nWiFiFree WiFi available throughout the building\nFacilitiesAir conditioning, bathroom, toilet (bidet), closet, TV (local channels only), fridge, safety box, dryer, handy-phone (a portable smartphone that you can use during your stay)\nAmenitiesShampoo, conditioner, handwashing soap, bath towels, face towels, roomwear (gauze samue clothing) ※Please notify the front desk if you need a toothbrush",
+                    "active": true,
+                    "seo_h1_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_title": "B&B | Bed and Breakfast | Guest Room Hana | Kyoto",
+                    "seo_meta_description": "The best reason to stay here is the convenient transportation. Kyoto station is the main transportation hub for Kyoto city and staying in this area gives you easy access to the entire city as well as day trips to surrounding sights such as Nara, Himeji Castle, Osaka, or the spectacular Fushimi Inari shrine.",
+                    "media": [
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/MG_3253-ae-1.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/72380347.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/72380366.jpg"
+                        },
+                        {
+                            "url": "https://luckyou-kyoto.com/new_wp/wp-content/uploads/2020/06/sakura2.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
