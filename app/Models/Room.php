@@ -32,7 +32,6 @@ class Room extends Model implements HasMedia
         'active'
     ];
 
-
     public function property(): Relation
     {
         return $this->belongsTo(Property::class);
@@ -41,5 +40,24 @@ class Room extends Model implements HasMedia
     public function scopeActive(Builder $builder): Builder
     {
         return $builder->where('active', true);
+    }
+
+    public function storeUniqueMedia($url)
+    {
+        $newFileName = explode('/', $url);
+        $newFileName = str_replace(' ', '-', end($newFileName));
+
+        $existingNames = $this->getMedia()->pluck('file_name');
+
+        if(!$existingNames->contains($newFileName) && preg_match('/(\.jpg|\.png|\.bmp|\.jpeg|\.gif|\.tif)$/i', $url)) {
+            try {
+                return $this->addMediaFromUrl($url)
+                    ->toMediaCollection();
+            } catch (Exception $e) {
+                return false;
+            }
+        }
+
+        return false;
     }
 }

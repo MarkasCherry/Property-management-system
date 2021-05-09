@@ -22,7 +22,7 @@ class CreateRoomsTable extends Migration
             $table->integer('capacity');
             $table->integer('bed_count');
             $table->integer('bathroom_count');
-            $table->string('short_description');
+            $table->text('short_description');
             $table->text('long_description');
             $table->string('seo_h1_title')->nullable();
             $table->text('seo_meta_title')->nullable();
