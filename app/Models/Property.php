@@ -19,6 +19,7 @@ class Property extends Model implements HasMedia
 
     protected $fillable = [
         'import_id',
+        'code',
         'name',
         'rating',
         'address',
@@ -45,5 +46,24 @@ class Property extends Model implements HasMedia
     public function amenities(): Relation
     {
         return $this->belongsToMany(Amenity::class, 'property_amenity');
+    }
+
+    public function storeUniqueMedia($url)
+    {
+        $newFileName = explode('/', $url);
+        $newFileName = str_replace(' ', '-', end($newFileName));
+
+        $existingNames = $this->getMedia()->pluck('file_name');
+
+        if(!$existingNames->contains($newFileName) && preg_match('/(\.jpg|\.png|\.bmp|\.jpeg|\.gif|\.tif)$/i', $url)) {
+            try {
+                return $this->addMediaFromUrl($url)
+                    ->toMediaCollection();
+            } catch (Exception $e) {
+                return false;
+            }
+        }
+
+        return false;
     }
 }
