@@ -18,6 +18,7 @@ class Property extends Model implements HasMedia
     use SoftDeletes, InteractsWithMedia;
 
     protected $fillable = [
+        'import_id',
         'name',
         'rating',
         'address',

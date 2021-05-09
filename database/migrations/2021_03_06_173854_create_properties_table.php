@@ -15,6 +15,8 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('import_id')->nullable()->constrained('importers')->nullOnDelete();
+            $table->string('code')->unique();
             $table->string('name');
             $table->float('rating');
             $table->string('address');
