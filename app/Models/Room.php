@@ -18,7 +18,6 @@ class Room extends Model implements HasMedia
 
     protected $fillable = [
         'property_id',
-        'import_id',
         'code',
         'name',
         'room_number',
