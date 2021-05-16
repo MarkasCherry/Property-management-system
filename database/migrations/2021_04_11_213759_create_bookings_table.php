@@ -24,6 +24,7 @@ class CreateBookingsTable extends Migration
             $table->float('price');
             $table->foreignId('status_id')->nullable()->constrained('booking_statuses')->nullOnDelete();
             $table->boolean('is_paid')->default(false);
+            $table->boolean('breakfast_needed')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
