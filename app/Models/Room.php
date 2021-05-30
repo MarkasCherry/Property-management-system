@@ -22,6 +22,7 @@ class Room extends Model implements HasMedia
         'name',
         'room_number',
         'capacity',
+        'night_price',
         'bed_count',
         'bathroom_count',
         'short_description',

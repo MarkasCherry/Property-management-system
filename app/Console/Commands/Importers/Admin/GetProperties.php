@@ -93,6 +93,7 @@ class GetProperties extends Command
                         'code' => $room->id,
                         'name' => $room->name,
                         'room_number' => $room->room_number,
+                        'night_price' => $room->price,
                         'capacity' => $room->capacity,
                         'bed_count' => $room->bed_count,
                         'bathroom_count' => $room->bathroom_count,
