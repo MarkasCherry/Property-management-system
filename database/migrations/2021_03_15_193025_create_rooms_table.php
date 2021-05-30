@@ -19,6 +19,7 @@ class CreateRoomsTable extends Migration
             $table->string('code')->unique();
             $table->string('name');
             $table->string('room_number');
+            $table->double('night_price');
             $table->integer('capacity');
             $table->integer('bed_count');
             $table->integer('bathroom_count');
