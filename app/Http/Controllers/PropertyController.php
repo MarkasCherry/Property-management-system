@@ -32,7 +32,9 @@ class PropertyController extends Controller
 
     public function store(PropertyRequest $request): RedirectResponse
     {
-        $property = Property::create($request->validated());
+        $property = Property::create($request->validated() + [
+                'code' => 'p' . (Property::count() + 1)
+            ]);
 
         return redirect()->route('properties.edit', $property)
             ->with('success', __('New property has been successfully added! Now you can fill the additional information and make property publicly visible'));
@@ -51,7 +53,7 @@ class PropertyController extends Controller
     public function storeRoom(RoomRequest $request, Property $property): RedirectResponse
     {
         $property->rooms()->create($request->validated() + [
-            'code' => 'p' . $property->id . '-r' . ($property->rooms()->count() + 1)
+            'code' => $property->code . '-r' . ($property->rooms()->count() + 1)
         ]);
 
         return redirect()->route('properties.show', $property);

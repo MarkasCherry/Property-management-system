@@ -53,12 +53,12 @@
                     <div id="active-items-tab" class="tab-content is-active">
                         <div class="list-view-inner">
                             @forelse($property->rooms as $room)
-                                <div class="list-view-item">
+                                <div class="list-view-item" id="room-{{ $room->id }}">
                                     <div class="list-view-item-inner">
                                         <img style="max-height: unset"
                                              src="{{ $room->getMedia()->first() ? $room->getMedia()->first()->getUrl() : asset('assets/img/placeholders/placeholder.png') }}"
                                              alt="{{ $room->room_number }}">
-                                        <div class="meta-left">
+                                        <div class="meta-left" style="max-width: 800px">
                                             <h3>
                                                 <span data-filter-match>{{ $room->name }}</span>
                                             </h3>
@@ -78,10 +78,13 @@
                                                 <i class="fas fa-circle icon-separator"></i>
                                                 <span data-filter-match>{{ $room->bathroom_count . __(' bathroom') }}</span>
                                             </span>
-
                                         </div>
+
                                         <div class="meta-right">
                                             <div class="buttons">
+                                                <button class="alertify-modal button h-button is-primary is-danger" data-room="{{ $room }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
                                                 <a href="{{ route('rooms.edit', $room) }}" class="button h-button is-primary is-raised">{{ __('Settings') }}</a>
                                             </div>
                                         </div>
@@ -107,5 +110,28 @@
     </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+        console.log('test');
+        $('.alertify-modal').on('click', function () {
+            let room = $(this).data('room');
+
+            initConfirm('Attention!',
+                'Are you sure you want to DELETE<b> "' + room.name + '"</b> room from the system? All the data assigned to this room ' +
+                'will be destroyed. Are you sure you want to proceed with DELETING this room?',
+                false, false,
+                'Delete', 'Cancel',
+                function (closeEvent) {
+                    axios({
+                        method: 'DELETE',
+                        url: 'rooms/' + room.id,
+                    }).then(
+                        $('#room-' + room.id).hide()
+                    );
+                })
+        })
+    </script>
+@endpush
 
 

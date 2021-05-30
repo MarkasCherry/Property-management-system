@@ -168,7 +168,7 @@
 
             initConfirm('Attention!',
                 'Are you sure you want to DELETE<b> "' + property.name + '"</b> property from the system? All the data assigned to this property ' +
-                'would be destroy and you will not be able to recreate it. Are you sure you want to proceed DELETING property?',
+                'will be destroyed. Are you sure you want to proceed with DELETING property?',
                 false, false,
                 'Delete', 'Cancel',
                 function (closeEvent) {
