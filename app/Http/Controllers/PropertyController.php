@@ -8,6 +8,7 @@ use App\Http\Requests\PropertyRequest;
 use App\Http\Requests\RoomRequest;
 use App\Http\Requests\SeoRequests;
 use App\Models\Property;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -29,7 +30,7 @@ class PropertyController extends Controller
         return view('properties.create');
     }
 
-    public function store(PropertyRequest $request)
+    public function store(PropertyRequest $request): RedirectResponse
     {
         $property = Property::create($request->validated());
 
@@ -47,14 +48,16 @@ class PropertyController extends Controller
         return view('properties.rooms.create', compact('property'));
     }
 
-    public function storeRoom(RoomRequest $request, Property $property)
+    public function storeRoom(RoomRequest $request, Property $property): RedirectResponse
     {
-        $property->rooms()->create($request->validated());
+        $property->rooms()->create($request->validated() + [
+            'code' => 'p' . $property->id . '-r' . ($property->rooms()->count() + 1)
+        ]);
 
         return redirect()->route('properties.show', $property);
     }
 
-    public function update(PropertyRequest $request, Property $property)
+    public function update(PropertyRequest $request, Property $property): RedirectResponse
     {
         $property->update($request->validated());
 

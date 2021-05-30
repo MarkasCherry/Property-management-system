@@ -27,24 +27,29 @@
                         </div>
                     </div>
 
-                    <div class="column is-4">
+                    <div class="column is-3">
                         <x-inputs.group for="capacity" name="capacity" value="{{ old('capacity') }}" type="number">
                             <x-slot name="title">{{ __('Max number of people') }}</x-slot>
                         </x-inputs.group>
                     </div>
 
-                    <div class="column is-4">
+                    <div class="column is-3">
                         <x-inputs.group for="bed_count" name="bed_count" value="{{ old('bed_count') }}" type="number">
                             <x-slot name="title">{{ __('Number of beds') }}</x-slot>
                         </x-inputs.group>
                     </div>
 
-                    <div class="column is-4">
+                    <div class="column is-3">
                         <x-inputs.group for="bathroom_count" name="bathroom_count" value="{{ old('bathroom_count') }}" type="number">
                             <x-slot name="title">{{ __('Number of bathrooms') }}</x-slot>
                         </x-inputs.group>
                     </div>
 
+                    <div class="column is-3">
+                        <x-inputs.group for="night_price" name="night_price" value="{{ old('night_price') }}">
+                            <x-slot name="title">{{ __('Price for the night') }}</x-slot>
+                        </x-inputs.group>
+                    </div>
 
                     <div class="column is-6">
                         <x-inputs.textarea for="short_description" name="short_description" value="{{ old('short_description') }}" rows="4">
