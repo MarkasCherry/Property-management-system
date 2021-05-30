@@ -20,7 +20,7 @@ class GetProperties extends Command
      *
      * @var string
      */
-    protected $description = 'Fetching properties from Admin server (for teting)';
+    protected $description = 'Fetching properties from Admin server';
 
     /**
      * Create a new command instance.

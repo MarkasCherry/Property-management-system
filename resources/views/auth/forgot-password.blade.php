@@ -23,7 +23,7 @@
                 </div>
                 <div class="column is-4 is-relative">
                     <a class="top-logo" href="/">
-                        <img class="light-image" src="{{ asset('assets/img/logos/logo/logo.svg') }}" alt="">
+                        <img class="light-image" src="{{ asset('assets/img/logos/logo/logo.png') }}" alt="">
                         <img class="dark-image" src="{{ asset('assets/img/logos/logo/logo-light.svg') }}" alt="">
                     </a>
                     <label class="dark-mode ml-auto">
