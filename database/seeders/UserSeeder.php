@@ -17,7 +17,8 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'admin',
             'email' => 'admin@propertiesmanager.co.uk',
-            'password' => bcrypt('secret')
+            'password' => bcrypt('secret'),
+            'profile_photo_path' => 'profile-photos/admin.jpg'
         ]);
     }
 }
