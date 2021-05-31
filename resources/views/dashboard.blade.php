@@ -4,4 +4,8 @@
 
 @section('content')
 
+    <div class="page-content-inner">
+        <livewire:announcements />
+    </div>
+
 @endsection

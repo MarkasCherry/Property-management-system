@@ -102,6 +102,9 @@
             </div>
         </div>
         <div class="right">
+            <div class="toolbar ml-auto">
+                @include('layouts.header.mode-switch')
+            </div>
             @include('layouts.header.profile')
         </div>
     </div>

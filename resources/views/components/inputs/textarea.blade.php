@@ -5,8 +5,9 @@
                   id="{{ $attributes->get('for') }}"
                   rows="{{ $attributes->get('rows') }}"
                   name="{{ $attributes->get('name') ?? '' }}"
-{{--                  @if($attributes->get('model', true)) wire:model.defer="{{ $attributes->get('model') ?? $attributes->get('name', '') }}" @endif--}}
+                  @if($attributes->get('model', true)) wire:model.defer="{{ $attributes->get('model') ?? $attributes->get('name', '') }}" @endif
                   placeholder="{{ $attributes->get('placeholder') }}">{{ old($attributes->get('for')) ?? $attributes->get('value') ?? null }}</textarea>
+
     </div>
     <x-jet-input-error for="{{ $attributes->get('for') }}" class="mt-2"/>
 </div>

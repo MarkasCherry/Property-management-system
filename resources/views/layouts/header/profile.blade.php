@@ -1,12 +1,12 @@
 <div class="dropdown profile-dropdown dropdown-trigger is-spaced is-right">
-    <img src="https://via.placeholder.com/150x150" data-demo-src="assets/img/avatars/photos/8.jpg" alt="">
+    <img src="{{ asset('storage/' . auth()->user()->profile_photo_path) ?? "https://via.placeholder.com/150x150" }}">
     <span class="status-indicator"></span>
 
     <div class="dropdown-menu" role="menu">
         <div class="dropdown-content">
             <div class="dropdown-head">
                 <div class="h-avatar is-large">
-                    <img class="avatar" src="https://via.placeholder.com/150x150" data-demo-src="assets/img/avatars/photos/8.jpg" alt="">
+                    <img class="avatar" src="{{ asset('storage/' . auth()->user()->profile_photo_path) ?? "https://via.placeholder.com/150x150" }}">
                 </div>
                 <div class="meta">
                     <span>{{ auth()->user()->getFullName() }}</span>
