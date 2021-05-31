@@ -30,7 +30,8 @@ class Room extends Model implements HasMedia
         'seo_h1_title',
         'seo_meta_title',
         'seo_meta_description',
-        'active'
+        'active',
+        'last_housekeeping'
     ];
 
     public function property(): Relation

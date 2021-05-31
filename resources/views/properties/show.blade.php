@@ -68,6 +68,9 @@
                                             <h4 class="p-t-5">
                                                 <span data-filter-match>{{ __('Price of the night') }}: <b>{{ \App\Tools::displayPrice($room->night_price) }}</b></span>
                                             </h4>
+                                            <h4 class="p-t-5">
+                                                <span data-filter-match>{{ __('Last housekeeping') }}: <b>{{ (Carbon\Carbon::parse($room->last_housekeeping)->format('Y-m-d')) }}</b></span>
+                                            </h4>
                                             <p class="p-t-5 columns">
                                                 <span class="column is-10" data-filter-match>{{ $room->short_description }}</span>
                                             </p>

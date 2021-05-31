@@ -32,7 +32,8 @@ class RoomRequest extends FormRequest
             'bathroom_count' => ['required', 'integer'],
             'short_description' => ['required', 'string', 'min:5'],
             'long_description' => ['required', 'max:65535', 'min:5'],
-            'active' => 'nullable'
+            'active' => 'nullable',
+            'last_housekeeping' => 'required'
         ];
     }
 }

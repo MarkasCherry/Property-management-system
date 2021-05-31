@@ -10,19 +10,30 @@
                     @csrf
                     @method('PUT')
                     <div class="columns is-multiline">
-                        <div class="column is-4">
+                        <div class="column is-3">
                             <x-inputs.group for="name" name="name" value="{{ $room->name }}">
                                 <x-slot name="title">{{ __('Room name') }}</x-slot>
                             </x-inputs.group>
                         </div>
 
-                        <div class="column is-4">
+                        <div class="column is-3">
                             <x-inputs.group for="room_number" name="room_number" value="{{ $room->room_number }}">
                                 <x-slot name="title">{{ __('Room number') }}</x-slot>
                             </x-inputs.group>
                         </div>
 
-                        <div class="column is-4">
+                        <div class="column is-3">
+                            <div class="field">
+                                <x-jet-label for="last_housekeeping" value="{{ __('Last Housekeeping') }}"/>
+                                <input type="date" name="last_housekeeping"
+                                       value="{{ old('last_housekeeping') ?? Carbon\Carbon::parse($room->last_housekeeping)->format('Y-m-d') }}"
+                                       class="input"
+                                />
+                                <x-jet-input-error for="last_housekeeping" class="mt-2"/>
+                            </div>
+                        </div>
+
+                        <div class="column is-3">
                             <div class="columns is-centered m-t-5">
                                 <x-inputs.switcher name="active" checked="{{ $room->active }}">
                                     <x-slot name="title">{{ __('Active?') }}</x-slot>

@@ -29,6 +29,7 @@ class CreateRoomsTable extends Migration
             $table->text('seo_meta_title')->nullable();
             $table->text('seo_meta_description')->nullable();
             $table->boolean('active')->default(true);
+            $table->timestamp('last_housekeeping')->default(now());
             $table->timestamps();
             $table->softDeletes();
         });
