@@ -9,20 +9,24 @@ class BookingStatusesSeeder extends Seeder
 {
     private $statuses = [
         [
+            'id' => 1,
             'name' => 'Cancelled by client',
             'color' => 'red'
         ],
         [
+            'id' => 2,
             'name' => 'Cancelled by administrator',
             'color' => 'red'
         ],
         [
+            'id' => 3,
             'name' => 'Not confirmed',
             'color' => 'gold'
         ],
         [
-            'name' => 'Not confirmed',
-            'color' => 'gold'
+            'id' => 4,
+            'name' => 'Confirmed',
+            'color' => 'green'
         ],
     ];
     /**

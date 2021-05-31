@@ -30,21 +30,35 @@
                 </div>
 
                 <div class="column is-4">
-                    <x-inputs.group for="price" model="price" type="number">
+                    <x-inputs.group for="price" model="price">
                         <x-slot name="title">{{ __('Price (£)') }}</x-slot>
                     </x-inputs.group>
                 </div>
 
                 <div class="column is-4">
-                    <x-inputs.group for="deposit_paid" model="deposit_paid" type="number">
+                    <x-inputs.group for="deposit_paid" model="deposit_paid">
                         <x-slot name="title">{{ __('Deposit paid (£)') }}</x-slot>
                     </x-inputs.group>
                 </div>
 
                 <div class="column is-4">
+                    <x-inputs.group for="guest_no" model="guest_no">
+                        <x-slot name="title">{{ __('Number of guests') }}</x-slot>
+                    </x-inputs.group>
+                </div>
+
+                <div class="column is-6">
                     <div class="columns is-centered m-t-5">
                         <x-inputs.switcher model="is_paid" checked="{{ $is_paid }}">
                             <x-slot name="title">{{ __('Is paid?') }}</x-slot>
+                        </x-inputs.switcher>
+                    </div>
+                </div>
+
+                <div class="column is-6">
+                    <div class="columns is-centered m-t-5">
+                        <x-inputs.switcher model="breakfast_needed" checked="{{ $breakfast_needed }}">
+                            <x-slot name="title">{{ __('Is breakfast needed?') }}</x-slot>
                         </x-inputs.switcher>
                     </div>
                 </div>

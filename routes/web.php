@@ -64,4 +64,5 @@ Route::group([
 
     //Bookings
     Route::resource('bookings', BookingController::class);
+    Route::get('bookings/{booking}/destroy', [BookingController::class, 'getDestroy'])->name('bookings.getDestroy');
 });

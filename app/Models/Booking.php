@@ -16,6 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property mixed booked_from
  * @property mixed price
  * @property mixed status_id
+ * @property mixed guest_no
+ * @property mixed breakfast_needed
  */
 class Booking extends Model
 {
@@ -31,6 +33,8 @@ class Booking extends Model
         'price',
         'status_id',
         'is_paid',
+        'guest_no',
+        'breakfast_needed'
     ];
 
     public function status(): BelongsTo

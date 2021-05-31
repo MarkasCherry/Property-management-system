@@ -22,4 +22,10 @@ class BookingController extends Controller
     {
         return view('bookings.edit', compact('booking'));
     }
+
+    public function getDestroy(Booking $booking)
+    {
+        $booking->delete();
+        return redirect()->back();
+    }
 }

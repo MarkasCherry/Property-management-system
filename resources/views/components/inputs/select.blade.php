@@ -6,7 +6,7 @@
         <div class="select width-100">
             <select name="{{ $attributes->get('name') ?? '' }}"
                     class="width-100"
-                    @if($attributes->get('model', true)) wire:model.defer="{{ $attributes->get('model') ?? $attributes->get('name', '') }}" @endif
+                    @if($attributes->get('model', true)) wire:model="{{ $attributes->get('model') ?? $attributes->get('name', '') }}" @endif
                     @if($attributes->get('change')) wire:change="{{ $attributes->get('change') }}" @endif
             >
                 @if($attributes->get('selectTitle'))

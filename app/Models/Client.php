@@ -53,4 +53,9 @@ class Client extends Model
     {
         return $this->name . ' ' . $this->lastname;
     }
+
+    public function getFullNameAttribute(): string
+    {
+        return "{$this->name} {$this->lastname}";
+    }
 }

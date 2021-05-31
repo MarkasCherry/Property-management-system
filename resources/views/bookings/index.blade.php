@@ -3,113 +3,6 @@
 @section('content')
     <div class="page-content-wrapper">
         <div class="page-content is-relative">
-
-            <div class="page-title has-text-centered is-webapp">
-
-                <div class="title-wrap">
-                    <h1 class="title is-4">List View</h1>
-                </div>
-
-                <div class="toolbar ml-auto">
-
-                    <div class="toolbar-link">
-                        <label class="dark-mode ml-auto">
-                            <input type="checkbox" checked>
-                            <span></span>
-                        </label>
-                    </div>
-
-                    <a class="toolbar-link right-panel-trigger" data-panel="languages-panel">
-                        <img src="assets/img/icons/flags/united-states-of-america.svg" alt="">
-                    </a>
-
-                    <div class="toolbar-notifications is-hidden-mobile">
-                        <div class="dropdown is-spaced is-dots is-right dropdown-trigger">
-                            <div class="is-trigger" aria-haspopup="true">
-                                <i data-feather="bell"></i>
-                                <span class="new-indicator pulsate"></span>
-                            </div>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <div class="heading">
-                                        <div class="heading-left">
-                                            <h6 class="heading-title">Notifications</h6>
-                                        </div>
-                                        <div class="heading-right">
-                                            <a class="notification-link" href="/admin-profile-notifications.html">See
-                                                all</a>
-                                        </div>
-                                    </div>
-                                    <ul class="notification-list">
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt=""
-                                                         src="https://via.placeholder.com/150x150"
-                                                         data-demo-src="assets/img/avatars/photos/7.jpg"/>
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Alice C.</span> left a
-                                                        comment.</p>
-                                                    <p class="time">1 hour ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt=""
-                                                         src="https://via.placeholder.com/150x150"
-                                                         data-demo-src="assets/img/avatars/photos/12.jpg"/>
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Joshua S.</span> uploaded a
-                                                        file.</p>
-                                                    <p class="time">2 hours ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt=""
-                                                         src="https://via.placeholder.com/150x150"
-                                                         data-demo-src="assets/img/avatars/photos/13.jpg"/>
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Tara S.</span> sent you a
-                                                        message.</p>
-                                                    <p class="time">2 hours ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="notification-item">
-                                                <div class="img-left">
-                                                    <img class="user-photo" alt=""
-                                                         src="https://via.placeholder.com/150x150"
-                                                         data-demo-src="assets/img/avatars/photos/25.jpg"/>
-                                                </div>
-                                                <div class="user-content">
-                                                    <p class="user-info"><span class="name">Melany W.</span> left a
-                                                        comment.</p>
-                                                    <p class="time">3 hours ago</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <a class="toolbar-link right-panel-trigger" data-panel="activity-panel">
-                        <i data-feather="grid"></i>
-                    </a>
-                </div>
-            </div>
-
             <div class="list-view-toolbar">
                 <div class="control has-icon">
                     <input class="input custom-text-filter" placeholder="Search..."
@@ -120,7 +13,7 @@
                 </div>
 
                 <div class="list-info">
-                    <span>55 records found</span>
+                    <span>{{ $bookings->count() . __(' Bookings found') }}</span>
                 </div>
 
                 <div class="buttons">
@@ -161,9 +54,8 @@
                                              alt="" data-user-popover="9">
                                     </div>
                                     <div class="meta-left">
-                                        <h3 data-filter-match>{{ $booking->client->getFullName() }}</h3>
+                                        <h3 data-filter-match>{{ $booking->client->fullName }}</h3>
                                         <span>
-                                            <i data-feather="check"></i>
                                             <span data-filter-match>{{ $booking->code }}</span>
                                         </span>
                                     </div>
@@ -173,23 +65,33 @@
                                         </span>
                                         <div class="stats">
                                             <div class="stat m-l-20 m-r-20">
-                                                <span style="font-size: 14px">{{ $booking->booked_from }}</span>
+                                                <span style="font-size: 14px">{{ Carbon\Carbon::parse($booking->booked_from)->format('Y-m-d') }}</span>
                                                 <span>{{ __('Booked from') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span style="font-size: 14px" >{{ $booking->booked_to }}</span>
+                                                <span style="font-size: 14px" >{{ Carbon\Carbon::parse($booking->booked_to)->format('Y-m-d') }}</span>
                                                 <span>{{ __('Booked to') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span style="font-size: 14px" >£{{ $booking->deposit_paid }}</span>
+                                                <span style="font-size: 14px" >{{ \App\Tools::displayPrice($booking->deposit_paid) }}</span>
                                                 <span>{{ __('Deposit paid') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span style="font-size: 14px">£{{ $booking->price }}</span>
+                                                <span style="font-size: 14px">{{ \App\Tools::displayPrice($booking->price) }}</span>
                                                 <span>{{ __('Price') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span style="font-size: 14px" >{{ $booking->breakfast_needed ? 'Yes' : 'No' }}</span>
+                                                <span>{{ __('Breakfast needed?') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span style="font-size: 14px" >{{ $booking->guest_no }}</span>
+                                                <span>{{ __('Number of Guests') }}</span>
                                             </div>
                                         </div>
 
@@ -200,7 +102,7 @@
                                             </div>
                                             <div class="dropdown-menu" role="menu">
                                                 <div class="dropdown-content">
-                                                    <a href="#" class="dropdown-item is-media">
+                                                    <a href="{{ route('clients.edit', $booking->client) }}" class="dropdown-item is-media">
                                                         <div class="icon">
                                                             <i class="lnil lnil-user-alt"></i>
                                                         </div>
@@ -209,26 +111,18 @@
                                                             <span>View profile</span>
                                                         </div>
                                                     </a>
-                                                    <a href="#" class="dropdown-item is-media">
+                                                    <hr class="dropdown-divider">
+                                                    <a href="{{ route('bookings.edit', $booking) }}" class="dropdown-item is-media">
                                                         <div class="icon">
-                                                            <i class="lnil lnil-bubble"></i>
+                                                            <i class="far fa-edit"></i>
                                                         </div>
                                                         <div class="meta">
-                                                            <span>Message</span>
-                                                            <span>Send Message</span>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="dropdown-item is-media">
-                                                        <div class="icon">
-                                                            <i class="lnil lnil-travel"></i>
-                                                        </div>
-                                                        <div class="meta">
-                                                            <span>Transfer</span>
-                                                            <span>Transfer to other list</span>
+                                                            <span>Edit</span>
+                                                            <span>Edit this booking</span>
                                                         </div>
                                                     </a>
                                                     <hr class="dropdown-divider">
-                                                    <a href="#" class="dropdown-item is-media">
+                                                    <a href="{{ route('bookings.getDestroy', $booking) }}" class="dropdown-item is-media">
                                                         <div class="icon">
                                                             <i class="lnil lnil-trash"></i>
                                                         </div>

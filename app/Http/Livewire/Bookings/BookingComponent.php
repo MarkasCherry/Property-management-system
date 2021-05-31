@@ -22,6 +22,8 @@ class BookingComponent extends Component
     public $deposit_paid = 0;
     public $price;
     public $status_id;
+    public $guest_no;
+    public $breakfast_needed;
 
     public $formTitle;
     public $indexRoute;
@@ -37,7 +39,14 @@ class BookingComponent extends Component
         'booked_to' => 'required',
         'status_id' => 'required',
         'price' => 'required',
+        'guest_no' => 'required',
+        'breakfast_needed' => 'required'
     ];
+
+    public function updatedRoomId($value)
+    {
+        $this->price = Room::find($value)->night_price;
+    }
 
     public function mount($booking = null)
     {
@@ -51,6 +60,8 @@ class BookingComponent extends Component
             $this->deposit_paid = $booking->deposit_paid;
             $this->price = $booking->price;
             $this->status_id = $booking->status_id;
+            $this->guest_no = $booking->guest_no;
+            $this->breakfast_needed = $booking->breakfast_needed;
         }
     }
 
@@ -64,12 +75,18 @@ class BookingComponent extends Component
     {
         $this->validate();
 
-//        $this->client->update([
-//            'name' => $this->name,
-//            'lastname' => $this->lastname,
-//            'phone' => $this->phone,
-//            'active' => $this->active
-//        ]);
+        $this->booking->update([
+            'is_paid' => $this->is_paid,
+            'client_id' => $this->client_id,
+            'room_id' => $this->room_id,
+            'booked_from' => Carbon::create($this->booked_from),
+            'booked_to' => Carbon::create($this->booked_to),
+            'deposit_paid' => $this->deposit_paid,
+            'price' => $this->price,
+            'status_id' => $this->status_id,
+            'guest_no' => $this->guest_no,
+            'breakfast_needed' => $this->breakfast_needed
+        ]);
 
         $this->emit('alert', [
             'type' => 'success',
@@ -82,7 +99,6 @@ class BookingComponent extends Component
         $this->validate();
 
         Booking::create([
-            'code' => Str::random(8),
             'is_paid' => $this->is_paid,
             'client_id' => $this->client_id,
             'room_id' => $this->room_id,
@@ -90,7 +106,9 @@ class BookingComponent extends Component
             'booked_to' => Carbon::create($this->booked_to),
             'deposit_paid' => $this->deposit_paid,
             'price' => $this->price,
-            'status_id' => $this->status_id
+            'status_id' => $this->status_id,
+            'guest_no' => $this->guest_no,
+            'breakfast_needed' => $this->breakfast_needed
         ]);
 
         $this->emit('alert', [
@@ -104,7 +122,9 @@ class BookingComponent extends Component
             'room_id',
             'deposit_paid',
             'price',
-            'status_id'
+            'status_id',
+            'guest_no',
+            'breakfast_needed'
         ]);
     }
 
