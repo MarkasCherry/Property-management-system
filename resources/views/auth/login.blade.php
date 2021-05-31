@@ -13,7 +13,7 @@
                             <div class="columns">
                                 <div class="column">
                                     <img class="hero-image"
-                                         src="{{ asset('assets/img/illustrations/login/station.svg') }}" alt="">
+                                         src="{{ asset('assets/img/illustrations/onboarding/set2-2.svg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -22,8 +22,8 @@
             </div>
             <div class="column is-4 is-relative">
                 <a class="top-logo" href="/">
-                    <img class="light-image" src="{{ asset('assets/img/logos/logo/logo.png') }}" alt="">
-                    <img class="dark-image" src="{{ asset('assets/img/logos/logo/logo-light.svg') }}" alt="">
+                    <img class="light-image" src="{{ asset('assets/img/logo.png') }}" alt="">
+                    <img class="dark-image" src="{{ asset('assets/img/logo.png') }}" alt="">
                 </a>
                 <label class="dark-mode ml-auto">
                     <input type="checkbox" name="dark-mode" checked>
