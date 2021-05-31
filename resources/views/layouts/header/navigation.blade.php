@@ -126,22 +126,29 @@
                     <div class="center has-slimscroll">
                         <div class="columns">
                             <div class="column is-3">
-                                <h4 class="column-heading">Users settings</h4>
+                                <h4 class="column-heading">{{ __('Users settings') }}</h4>
                                 <ul>
                                     <li>
                                         <a href="{{ route('users.index') }}">
-                                            <span>User management</span>
+                                            <span>{{ __('User management') }}</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{ route('roles.index') }}">
-                                            <span>Roles and permissions</span>
+                                            <span>{{ __('Roles and permissions') }}</span>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="column is-3">
-                                <h4 class="column-heading">Personal</h4>
+                                <h4 class="column-heading">{{ __('System settings') }}</h4>
+                                <ul>
+                                    <li>
+                                        <a href="{{ route('amenities.index') }}">
+                                            <span>{{ __('Amenities') }}</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
