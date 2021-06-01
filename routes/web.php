@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
@@ -65,4 +66,7 @@ Route::group([
     //Bookings
     Route::resource('bookings', BookingController::class);
     Route::get('bookings/{booking}/destroy', [BookingController::class, 'getDestroy'])->name('bookings.getDestroy');
+
+    //Questions
+    Route::get('questions', [QuestionController::class, 'index'])->name('questions.index');
 });
