@@ -6,4 +6,3 @@
     <br><br>
     <p><i>"{{ $question->question }}"</i></p>
 @endcomponent
-
