@@ -13,7 +13,8 @@ class Review extends Model
     protected $fillable = [
         'clients',
         'rating',
-        'message'
+        'message',
+        'public'
     ];
 
     public function client(): BelongsTo

@@ -18,6 +18,7 @@ class CreateReviewsTable extends Migration
             $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete();
             $table->float('rating');
             $table->text('message');
+            $table->boolean('public')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });
