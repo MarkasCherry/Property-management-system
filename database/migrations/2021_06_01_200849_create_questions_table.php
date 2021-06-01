@@ -19,6 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->string('email');
             $table->string('phone_number')->nullable();
             $table->text('question');
+            $table->text('answer')->nullable();
             $table->boolean('active')->default(true);
             $table->timestamps();
             $table->softDeletes();

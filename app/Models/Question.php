@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @method static active()
+ */
 class Question extends Model
 {
     use SoftDeletes;
@@ -15,7 +18,8 @@ class Question extends Model
         'email',
         'phone_number',
         'question',
-        'active'
+        'active',
+        'answer'
     ];
 
     public function scopeActive(Builder $builder)
