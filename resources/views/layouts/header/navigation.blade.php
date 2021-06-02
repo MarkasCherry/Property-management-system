@@ -149,6 +149,11 @@
                                             <span>{{ __('Amenities') }}</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('reviews.index') }}">
+                                            <span>{{ __('Reviews') }}</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title') {{ __('Questions') }} @endsection
+@section('title') {{ __('Reviews') }} @endsection
 
 @section('content')
 
