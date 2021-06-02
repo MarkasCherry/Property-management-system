@@ -47,7 +47,7 @@ class ReviewsTable extends LivewireDatatable
 
             Column::callback(['id', 'public'], function ($id, $public) {
                 return view('reviews.toggle-public', compact('id', 'public'));
-            })
+            })->label('Public?')
         ];
     }
 
