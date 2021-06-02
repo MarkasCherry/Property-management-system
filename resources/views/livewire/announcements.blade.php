@@ -35,7 +35,7 @@
                                 <div class="box-text">
                                     <div class="meta-text">
                                         <p><span>{{ $announcement->user->getFullName() }}</span> {{ $announcement->message }}</p>
-                                        <span>{{ $announcement->created_at->format('g:i a') }}</span>
+                                        <span>{{ $announcement->created_at->format('g  :i a') }}</span>
                                     </div>
                                 </div>
                             </div>

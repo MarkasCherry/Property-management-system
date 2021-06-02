@@ -38,6 +38,6 @@ class Announcements extends Component
     {
         $announcements = AnnouncementsModel::latest()->paginate(10);
 
-        return view('livewire.announcments', compact('announcements'));
+        return view('livewire.announcements', compact('announcements'));
     }
 }
