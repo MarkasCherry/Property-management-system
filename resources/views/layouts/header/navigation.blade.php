@@ -154,6 +154,16 @@
                                             <span>{{ __('Reviews') }}</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('settings.privacyPolicy') }}">
+                                            <span>{{ __('Privacy Policy') }}</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('settings.index') }}">
+                                            <span>{{ __('Other settings') }}</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
