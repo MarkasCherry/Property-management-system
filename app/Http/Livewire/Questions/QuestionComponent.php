@@ -41,6 +41,11 @@ class QuestionComponent extends Component
 
         Mail::to($this->question->email)
             ->send(new SendAnswer($this->question));
+
+        $this->emit('alert', [
+            'type' => 'success',
+            'message' => 'Email has been successfully sent!'
+        ]);
     }
 
     public function render()
