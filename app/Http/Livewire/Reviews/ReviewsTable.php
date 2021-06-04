@@ -38,7 +38,7 @@ class ReviewsTable extends LivewireDatatable
                 ->label('Rating'),
 
             Column::name('message')
-                ->label('Rating')
+                ->label('Comment')
                 ->editable()
                 ->searchable(),
 
