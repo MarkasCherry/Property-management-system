@@ -32,7 +32,9 @@ class ReviewsTable extends LivewireDatatable
                 ->label('Client name')
                 ->searchable(),
 
-            Column::name('rating')
+            Column::callback(['rating'], function ($rating) {
+                return view('livewire.reviews.rating', compact('rating'));
+            })
                 ->label('Rating'),
 
             Column::name('message')
@@ -47,7 +49,10 @@ class ReviewsTable extends LivewireDatatable
 
             Column::callback(['id', 'public'], function ($id, $public) {
                 return view('reviews.toggle-public', compact('id', 'public'));
-            })->label('Public?')
+            })->label('Public?'),
+
+            Column::delete()
+                ->alignCenter()
         ];
     }
 
