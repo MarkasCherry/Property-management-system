@@ -15,6 +15,42 @@ class PermissionsSeeder extends Seeder
                 'Edit administrators',
                 'View administrators',
                 'Delete administrators',
+            ],
+            'Properties' => [
+                'Create properties',
+                'Edit properties',
+                'View properties',
+                'Delete properties',
+            ],
+            'Rooms' => [
+                'Create rooms',
+                'Edit rooms',
+                'View rooms',
+                'Delete rooms',
+            ],
+            'Amenities' => [
+                'Create amenities',
+                'Edit amenities',
+                'View amenities',
+                'Delete amenities',
+            ],
+            'Settings' => [
+                'Create settings',
+                'Edit settings',
+                'View settings',
+                'Delete settings',
+            ],
+            'Notifications' => [
+                'Create notifications',
+                'Edit notifications',
+                'View notifications',
+                'Delete notifications',
+            ],
+            'Questions' => [
+                'Create questions',
+                'Edit questions',
+                'View questions',
+                'Delete questions',
             ]
         ]
     ];
