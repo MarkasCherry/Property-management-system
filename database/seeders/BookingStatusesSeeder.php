@@ -26,7 +26,7 @@ class BookingStatusesSeeder extends Seeder
         [
             'id' => 4,
             'name' => 'Confirmed',
-            'color' => 'green'
+            'color' => '#72ff72'
         ],
     ];
     /**

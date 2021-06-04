@@ -28,6 +28,11 @@ class SettingsSeeder extends Seeder
             'name' => 'Address',
             'value' => '326 Benzaitencho, Suwamachi-Matsubara-sagaru, Shimogyo-ku, Kyoto 600-8428'
         ],
+        [
+            'id' => 5,
+            'name' => 'Deposit Pricing',
+            'value' => 20
+        ],
     ];
 
     /**

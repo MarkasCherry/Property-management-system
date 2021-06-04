@@ -39,7 +39,7 @@ class AmenitiesTable extends LivewireDatatable
                 ->alignCenter(),
 
             Column::callback(['icon'], function ($icon) {
-                return "<img width=18 src=" . asset('storage/' . $icon) . "/>";
+                return $icon ? "<img width=18 src=" . asset('storage/' . $icon) . "/>" : null;
             })
                 ->label('Custom icon')
                 ->alignCenter(),
