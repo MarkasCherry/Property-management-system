@@ -3,15 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
     public function index()
     {
-        $bookings = Booking::latest()->paginate(25);
+        $todayBookings = Booking::whereDate('booked_from', Carbon::today())->get();
 
-        return view('bookings.index', compact('bookings'));
+        $excludedIds = $todayBookings->pluck('id')->toArray();
+
+        $bookings = Booking::whereNotIn('id', $excludedIds)->latest()->paginate(25);
+
+        return view('bookings.index', compact('bookings', 'todayBookings'));
     }
 
     public function create() {

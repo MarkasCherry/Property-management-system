@@ -43,27 +43,21 @@
                     </div>
 
                     <div class="list-view-inner">
-
-                    @foreach($bookings as $booking)
-                        <!--Item-->
+                    @if(!empty($todayBookings))
+                        <div style="border: 1px solid orangered; border-radius: 10px; padding: 20px;" class="m-b-20">
+                        @foreach($todayBookings as $booking)
+                            <!--Item-->
                             <div class="list-view-item">
                                 <div class="list-view-item-inner">
-                                    <div class="h-avatar is-large">
-                                        <img class="avatar"
-                                             src="https://lh3.googleusercontent.com/proxy/SVEyllRVJDTZQpWrFdvEORhS9VpING4VN4YF2ePjINGHr1i7LgKjKq_RPTFthVlktYF8btHLMO2Rs8KAjMPgPjhIiKkCwrCeDoH1R8zReMuqeH65KCuCxrw"
-                                             alt="" data-user-popover="9">
-                                    </div>
                                     <div class="meta-left">
                                         <h3 data-filter-match>{{ $booking->client->fullName }}</h3>
-                                        <span>
-                                            <span data-filter-match>{{ $booking->code }}</span>
-                                        </span>
                                     </div>
+                                    <span class="tag is-rounded is-elevated m-r-50" style="background-color: {{ $booking->status->color }};"
+                                          data-filter-match>{{ $booking->status->name }}
+                                    </span>
                                     <div class="meta-right">
-                                        <span class="tag is-rounded is-elevated m-r-50" style="background-color: {{ $booking->status->color }};"
-                                              data-filter-match>{{ $booking->status->name }}
-                                        </span>
                                         <div class="stats">
+                                            <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
                                                 <span style="font-size: 14px">{{ Carbon\Carbon::parse($booking->booked_from)->format('Y-m-d') }}</span>
                                                 <span>{{ __('Booked from') }}</span>
@@ -85,12 +79,12 @@
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span style="font-size: 14px" >{{ $booking->breakfast_needed ? 'Yes' : 'No' }}</span>
+                                                <span data-filter-match style="font-size: 14px" >{{ $booking->breakfast_needed ? 'Yes' : 'No' }}</span>
                                                 <span>{{ __('Breakfast needed?') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
-                                                <span style="font-size: 14px" >{{ $booking->guest_no }}</span>
+                                                <span data-filter-match style="font-size: 14px" >{{ $booking->guest_no }}</span>
                                                 <span>{{ __('Number of Guests') }}</span>
                                             </div>
                                         </div>
@@ -121,14 +115,85 @@
                                                             <span>Edit this booking</span>
                                                         </div>
                                                     </a>
-                                                    <hr class="dropdown-divider">
-                                                    <a href="{{ route('bookings.getDestroy', $booking) }}" class="dropdown-item is-media">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                            <span class="tag is-danger">{{ __('BOOKINGS OF TODAY') }}</span>
+                        </div>
+                    @endif
+
+                    @foreach($bookings as $booking)
+                        <!--Item-->
+                            <div class="list-view-item">
+                                <div class="list-view-item-inner">
+                                    <div class="meta-left">
+                                        <h3 data-filter-match>{{ $booking->client->fullName }}</h3>
+                                    </div>
+                                    <span class="tag is-rounded is-elevated m-r-50" style="background-color: {{ $booking->status->color }};"
+                                          data-filter-match>{{ $booking->status->name }}
+                                    </span>
+                                    <div class="meta-right">
+                                        <div class="stats">
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span style="font-size: 14px">{{ Carbon\Carbon::parse($booking->booked_from)->format('Y-m-d') }}</span>
+                                                <span>{{ __('Booked from') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span style="font-size: 14px" >{{ Carbon\Carbon::parse($booking->booked_to)->format('Y-m-d') }}</span>
+                                                <span>{{ __('Booked to') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span style="font-size: 14px" >{{ \App\Tools::displayPrice($booking->deposit_paid) }}</span>
+                                                <span>{{ __('Deposit paid') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span style="font-size: 14px">{{ \App\Tools::displayPrice($booking->price) }}</span>
+                                                <span>{{ __('Price') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span data-filter-match style="font-size: 14px" >{{ $booking->breakfast_needed ? 'Yes' : 'No' }}</span>
+                                                <span>{{ __('Breakfast needed?') }}</span>
+                                            </div>
+                                            <div class="separator"></div>
+                                            <div class="stat m-l-20 m-r-20">
+                                                <span data-filter-match style="font-size: 14px" >{{ $booking->guest_no }}</span>
+                                                <span>{{ __('Number of Guests') }}</span>
+                                            </div>
+                                        </div>
+
+                                        <!--Dropdown-->
+                                        <div class="dropdown is-spaced is-dots is-right dropdown-trigger">
+                                            <div class="is-trigger" aria-haspopup="true">
+                                                <i data-feather="more-vertical"></i>
+                                            </div>
+                                            <div class="dropdown-menu" role="menu">
+                                                <div class="dropdown-content">
+                                                    <a href="{{ route('clients.edit', $booking->client) }}" class="dropdown-item is-media">
                                                         <div class="icon">
-                                                            <i class="lnil lnil-trash"></i>
+                                                            <i class="lnil lnil-user-alt"></i>
                                                         </div>
                                                         <div class="meta">
-                                                            <span>Remove</span>
-                                                            <span>Remove from list</span>
+                                                            <span>Profile</span>
+                                                            <span>View profile</span>
+                                                        </div>
+                                                    </a>
+                                                    <hr class="dropdown-divider">
+                                                    <a href="{{ route('bookings.edit', $booking) }}" class="dropdown-item is-media">
+                                                        <div class="icon">
+                                                            <i class="far fa-edit"></i>
+                                                        </div>
+                                                        <div class="meta">
+                                                            <span>Edit</span>
+                                                            <span>Edit this booking</span>
                                                         </div>
                                                     </a>
                                                 </div>

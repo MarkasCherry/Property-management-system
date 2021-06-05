@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property mixed guest_no
  * @property mixed breakfast_needed
  * @method static whereHas(string $string, \Closure $param)
- * @method static whereDate(string $column, string $operator, string $value)
+ * @method static whereNotIn(string $string, $excludedIds)
  */
 class Booking extends Model
 {
