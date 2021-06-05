@@ -61,20 +61,20 @@
 
                         <div class="column is-3">
                             <x-inputs.group for="night_price" name="night_price" value="{{ $room->night_price }}">
-                                <x-slot name="title">{{ __('Price for the night') }}</x-slot>
+                                <x-slot name="title">{{ __('Price per night') }}</x-slot>
                             </x-inputs.group>
                         </div>
 
-                        <div class="column is-6">
+                        <div class="column is-12">
                             <x-inputs.textarea for="short_description" name="short_description" value="{{ $room->short_description }}" rows="4">
                                 <x-slot name="title">{{ __('Short description') }}</x-slot>
                             </x-inputs.textarea>
                         </div>
 
-                        <div class="column is-6">
-                            <x-inputs.textarea for="long_description" name="long_description" value="{{ $room->long_description }}" rows="4">
+                        <div class="column is-12">
+                            <x-inputs.sun-editor id="sun-editor" for="long_description" name="long_description" value="{{ $room->long_description }}">
                                 <x-slot name="title">{{ __('Long description') }}</x-slot>
-                            </x-inputs.textarea>
+                            </x-inputs.sun-editor>
                         </div>
                     </div>
                     <x-buttons.form-submit title="{{ __('Save Main Settings') }}"></x-buttons.form-submit>
@@ -84,28 +84,6 @@
             <x-slot name="media">
                 <x-forms.media :model="'App_Models_Room'" :modelId="$room->id"></x-forms.media>
             </x-slot>
-
-{{--            <x-slot name="amenities">--}}
-{{--                <form method="post" action="{{ route('properties.updateAmenities', $property) }}">--}}
-{{--                    @csrf--}}
-{{--                    @method('PUT')--}}
-{{--                    <div class="field">--}}
-{{--                        <label>{{ __('Add property amenities') }}</label>--}}
-{{--                        <div class="control">--}}
-{{--                            <select class="form-control" name="amenities[]"--}}
-{{--                                    id="choices-multiple-remove-button" placeholder="{{ __('Select amenities') }}"--}}
-{{--                                    multiple>--}}
-{{--                                @foreach($amenities as $amenity)--}}
-{{--                                    <option value="{{ $amenity->id }}" @if($property->amenities()->whereAmenityId($amenity->id)->exists()) selected @endif>--}}
-{{--                                        {{ $amenity->name }}--}}
-{{--                                    </option>--}}
-{{--                                @endforeach--}}
-{{--                            </select>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <x-buttons.form-submit title="{{ __('Save amenities') }}"></x-buttons.form-submit>--}}
-{{--                </form>--}}
-{{--            </x-slot>--}}
 
             <x-slot name="seoSettings">
                 <x-forms.seo-settings action="{{ route('rooms.updateSeo', $room) }}" :model="$room"></x-forms.seo-settings>
@@ -127,6 +105,37 @@
 
     <script>
         lightGallery(document.getElementById('lightgallery'));
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            const editor = SUNEDITOR.create((document.getElementById('sun-editor') || 'sun-editor'), {
+                buttonList: [
+                    ['undo', 'redo'],
+                    ['font', 'fontSize', 'formatBlock'],
+                    ['paragraphStyle', 'blockquote'],
+                    ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
+                    ['fontColor', 'hiliteColor', 'textStyle'],
+                    ['removeFormat'],
+                    ['outdent', 'indent'],
+                    ['align', 'horizontalRule', 'list', 'lineHeight'],
+                    ['table', 'link'],
+                    ['fullScreen', 'showBlocks', 'codeView'],
+                    ['preview'],
+                ],
+                width: '100%',
+                height: 250,
+                placeholder: 'Write the description about room...'
+            });
+
+            $(window).click(function() {
+                if(editor.getContents() === '<p><br></p>') {
+                    $('#sun-editor-text').val(null);
+                } else {
+                    $('#sun-editor-text').val(editor.getContents());
+                }
+            });
+        });
     </script>
 
 @endpush
