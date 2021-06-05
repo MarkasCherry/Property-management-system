@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static find(int $id)
  * @method static updateOrCreate(array $array, array $array1)
+ * @method static whereName(string $string)
  */
 class Setting extends Model
 {

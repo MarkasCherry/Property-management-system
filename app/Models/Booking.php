@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property mixed status_id
  * @property mixed guest_no
  * @property mixed breakfast_needed
+ * @method static whereHas(string $string, \Closure $param)
  */
 class Booking extends Model
 {
