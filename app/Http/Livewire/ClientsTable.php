@@ -30,7 +30,7 @@ class ClientsTable extends LivewireDatatable
 
             Column::callback(['profile_photo_path'], function ($path) {
                 return $path
-                    ? "<img width=96 src=$path />"
+                    ? "<img width=96 src=' " . env('FRONT_OFFICE_URL') . "storage/" . $path . "' />"
                     : "<img width='62' src='" . asset('assets/img/placeholders/placeholder.png') . "'>";
             })
                 ->label('Photo')
