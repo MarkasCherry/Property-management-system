@@ -11,22 +11,27 @@ class BookingStatusesSeeder extends Seeder
         [
             'id' => 1,
             'name' => 'Cancelled by client',
-            'color' => 'red'
+            'color' => '#ff000073'
         ],
         [
             'id' => 2,
             'name' => 'Cancelled by administrator',
-            'color' => 'red'
+            'color' => '#ff000073'
         ],
         [
             'id' => 3,
-            'name' => 'Not confirmed',
+            'name' => 'Upcoming',
             'color' => 'gold'
         ],
         [
             'id' => 4,
-            'name' => 'Confirmed',
+            'name' => 'Ongoing',
             'color' => '#72ff72'
+        ],
+        [
+            'id' => 5,
+            'name' => 'Completed',
+            'color' => '#50daff'
         ],
     ];
     /**
@@ -37,8 +42,8 @@ class BookingStatusesSeeder extends Seeder
     public function run()
     {
         foreach ($this->statuses as $status) {
-            BookingStatus::firstOrCreate([
-                'name' => $status['name']
+            BookingStatus::updateOrCreate([
+                'id' => $status['id']
             ], $status);
         }
     }
