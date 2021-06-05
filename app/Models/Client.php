@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed phone
  * @property mixed email
  * @property mixed active
+ * @method static whereDate(string $string, string $string1, string $toDateTimeString)
  */
 class Client extends Model
 {
