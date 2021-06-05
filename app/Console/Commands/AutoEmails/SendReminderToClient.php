@@ -12,8 +12,8 @@ class SendReminderToClient extends Command
 {
     private $customMessage = [
         0 => "You have a visit booked today",
-        3 => "We are expecting you in 3 days ",
-        7 => "One week left until your booking"
+        3 => "We are expecting you in 3 days",
+        7 => "We are expecting you in a week"
     ];
 
     /**
