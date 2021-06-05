@@ -19,8 +19,8 @@
         <div class="timeline-header"></div>
         <div class="timeline-wrapper-inner">
             <div class="timeline-container">
-                @forelse($announcements as $announcement)
-                    <!--Timeline item-->
+            @forelse($announcements as $announcement)
+                <!--Timeline item-->
                     <div class="timeline-item is-unread">
                         <div class="date">
                             <span>{{ $announcement->created_at->format('j F, Y') }}</span>
@@ -28,14 +28,18 @@
                         <div class="dot is-info"></div>
                         <div class="content-wrap">
                             <div class="content-box">
-                                <div class="status"></div>
                                 <div class="h-avatar">
-                                    <img class="avatar" src="{{ asset('storage/' . $announcement->user->profile_photo_path) ?? "https://via.placeholder.com/150x150" }}">
+                                    <img class="avatar"
+                                         src="{{ asset('storage/' . $announcement->user->profile_photo_path) ?? "https://via.placeholder.com/150x150" }}">
                                 </div>
                                 <div class="box-text">
                                     <div class="meta-text">
-                                        <p><span>{{ $announcement->user->getFullName() }}</span> {{ $announcement->message }}</p>
-                                        <span>{{ $announcement->created_at->format('g  :i a') }}</span>
+                                        <p>
+                                            <span>@if(!empty($announcement->user->position))
+                                                    {{ $announcement->user->position }}@endif
+                                                <i class="text-danger">{{ $announcement->user->getFullName() }}</i></span><br><br>
+                                            {{ $announcement->message }}</p><br>
+                                        <span>{{ $announcement->created_at->format('g:i a') }}</span>
                                     </div>
                                 </div>
                             </div>

@@ -6,7 +6,6 @@
     @component('mail::button', ['url' => env('APP_URL')])
         Login here
     @endcomponent
-
     Thanks,<br>
     {{ env('APP_NAME') }}
 @endcomponent

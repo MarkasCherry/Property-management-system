@@ -4,6 +4,8 @@
 
 @section('content')
 
+    <livewire:settings.add-setting />
+
     <livewire:settings.settings-table />
 
 @endsection

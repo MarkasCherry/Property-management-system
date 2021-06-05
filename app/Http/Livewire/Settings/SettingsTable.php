@@ -13,6 +13,10 @@ class SettingsTable extends LivewireDatatable
 
     public $hideable = 'select';
 
+    protected $listeners = [
+        'updateTable:settings' => '$refresh'
+    ];
+
     public function builder()
     {
         return Setting::query()->whereNotIn('id', [Setting::PRIVACY_POLICY]);
