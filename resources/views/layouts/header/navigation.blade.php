@@ -94,6 +94,11 @@
                     <i data-feather="users"></i>
                     <span>{{ __('Clients') }}</span>
                 </a>
+                <a href="{{ route('statistics.index') }}" id="dashboards-navbar-menu"
+                   class="centered-link">
+                    <i data-feather="bar-chart-2"></i>
+                    <span>{{ __('Statistics') }}</span>
+                </a>
                 <a id="dashboards-navbar-settings"
                    class="centered-link centered-link-toggle" data-menu-id="dashboards-webapp-settings">
                     <i data-feather="settings"></i>
