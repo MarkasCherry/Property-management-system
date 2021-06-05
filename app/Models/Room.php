@@ -44,6 +44,11 @@ class Room extends Model implements HasMedia
         return $builder->where('active', true);
     }
 
+    public function bookings(): Relation
+    {
+        return $this->hasMany(Booking::class);
+    }
+
     public function storeUniqueMedia($url)
     {
         $newFileName = explode('/', $url);

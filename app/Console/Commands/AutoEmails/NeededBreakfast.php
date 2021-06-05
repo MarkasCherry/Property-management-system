@@ -4,7 +4,6 @@ namespace App\Console\Commands\AutoEmails;
 
 use App\Mail\SendBreakfastNeeded;
 use App\Models\Booking;
-use App\Models\BookingStatus;
 use App\Models\Setting;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Builder;

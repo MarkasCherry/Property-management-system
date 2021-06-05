@@ -6,6 +6,7 @@ use App\Http\Controllers\MediaController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\HomeController;
@@ -79,4 +80,7 @@ Route::group([
     Route::resource('settings', SettingController::class)->only('index');
     Route::get('privacy-policy', [SettingController::class, 'privacyPolicy'])->name('settings.privacyPolicy');
     Route::put('privacy-policy/update', [SettingController::class, 'updatePrivacyPolicy'])->name('settings.privacyPolicy.update');
+
+    //Statistics
+    Route::resource('statistics', StatisticsController::class)->only('index');
 });

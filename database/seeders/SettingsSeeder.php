@@ -21,7 +21,7 @@ class SettingsSeeder extends Seeder
         [
             'id' => 3,
             'name' => 'Email',
-            'value' => 'admin@propertiesmanager.co.uk'
+            'value' => 'admin@pms.com'
         ],
         [
             'id' => 4,
@@ -33,6 +33,16 @@ class SettingsSeeder extends Seeder
             'name' => 'Deposit Pricing',
             'value' => 20
         ],
+        [
+            'id' => 6,
+            'name' => 'Kitchen Email',
+            'value' => "kitchen@pms.com"
+        ],
+        [
+            'id' => 7,
+            'name' => 'Housekeeping Email',
+            'value' => "housekeeping@pms.com"
+        ]
     ];
 
     /**

@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Mail;
 class SendReminderToClient extends Command
 {
     private $customMessage = [
-        0 => "Your booking is today",
-        3 => "3 days left until you booking",
+        0 => "You have a visit booked today",
+        3 => "We are expecting you in 3 days ",
         7 => "One week left until your booking"
     ];
 
