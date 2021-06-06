@@ -12,4 +12,9 @@ class StatisticsController extends Controller
 
         return view('statistics.index', compact('statistics'));
     }
+
+    public function logs()
+    {
+        return view('statistics.logs');
+    }
 }

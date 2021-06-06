@@ -14,6 +14,9 @@
                     <div class="start">
                         <h3>{{ __('Weekly statistics') }}</h3>
                     </div>
+                    <div class="end">
+                        <a href="{{ route('statistics.logs') }}" class="button h-button is-primary is-elevated">{{ __('View logs') }}</a>
+                    </div>
                 </div>
 
                 <!--Body-->

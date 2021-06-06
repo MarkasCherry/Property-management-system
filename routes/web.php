@@ -83,4 +83,5 @@ Route::group([
 
     //Statistics
     Route::resource('statistics', StatisticsController::class)->only('index');
+    Route::get('statistics/logs', [StatisticsController::class, 'logs'])->name('statistics.logs');
 });
