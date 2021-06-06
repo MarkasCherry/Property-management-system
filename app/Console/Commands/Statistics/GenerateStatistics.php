@@ -8,7 +8,6 @@ use App\Models\Client;
 use App\Models\Setting;
 use App\Models\WeeklyStatistics;
 use Illuminate\Console\Command;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
 
 class GenerateStatistics extends Command
