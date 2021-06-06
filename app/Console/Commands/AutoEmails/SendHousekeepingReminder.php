@@ -23,7 +23,7 @@ class SendHousekeepingReminder extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Assign the rooms, which needs housekeeping, to housekeeping team';
 
     /**
      * Create a new command instance.
@@ -58,6 +58,7 @@ class SendHousekeepingReminder extends Command
                     ->wheredoesnthave('bookings');
             })
             ->get();
+
         Mail::to(Setting::whereName('Housekeeping Email')->first()->value)
             ->send(new SendHousekeepingRooms($rooms));
     }
