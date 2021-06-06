@@ -31,13 +31,13 @@
 
                 <div class="column is-4">
                     <x-inputs.group for="price" model="price">
-                        <x-slot name="title">{{ __('Price (£)') }}</x-slot>
+                        <x-slot name="title">{{ __('Price  per Night') }}</x-slot>
                     </x-inputs.group>
                 </div>
 
                 <div class="column is-4">
                     <x-inputs.group for="deposit_paid" model="deposit_paid">
-                        <x-slot name="title">{{ __('Deposit paid (£)') }}</x-slot>
+                        <x-slot name="title">{{ __('Deposit paid') }}</x-slot>
                     </x-inputs.group>
                 </div>
 

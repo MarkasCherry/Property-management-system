@@ -7,6 +7,7 @@ use App\Models\BookingStatus;
 use App\Models\Client;
 use App\Models\Room;
 use Carbon\Carbon;
+use Carbon\Traits\Creator;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
@@ -58,7 +59,7 @@ class BookingComponent extends Component
             $this->booked_from = $booking->booked_from;
             $this->booked_to = $booking->booked_to;
             $this->deposit_paid = $booking->deposit_paid;
-            $this->price = $booking->price;
+            $this->price = round($booking->price / (Carbon::create($booking->booked_to))->diffInDays(Carbon::create($booking->booked_from)), 2);
             $this->status_id = $booking->status_id;
             $this->guest_no = $booking->guest_no;
             $this->breakfast_needed = $booking->breakfast_needed;
@@ -82,7 +83,7 @@ class BookingComponent extends Component
             'booked_from' => Carbon::create($this->booked_from),
             'booked_to' => Carbon::create($this->booked_to),
             'deposit_paid' => $this->deposit_paid,
-            'price' => $this->price,
+            'price' => $this->price * (Carbon::create($this->booked_to))->diffInDays(Carbon::create($this->booked_from)),
             'status_id' => $this->status_id,
             'guest_no' => $this->guest_no,
             'breakfast_needed' => $this->breakfast_needed
@@ -105,7 +106,7 @@ class BookingComponent extends Component
             'booked_from' => Carbon::create($this->booked_from),
             'booked_to' => Carbon::create($this->booked_to),
             'deposit_paid' => $this->deposit_paid,
-            'price' => $this->price,
+            'price' => $this->price * (Carbon::create($this->booked_to))->diffInDays(Carbon::create($this->booked_from)),
             'status_id' => $this->status_id,
             'guest_no' => $this->guest_no,
             'breakfast_needed' => $this->breakfast_needed

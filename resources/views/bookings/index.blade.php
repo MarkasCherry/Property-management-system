@@ -13,7 +13,7 @@
                 </div>
 
                 <div class="list-info">
-                    <span>{{ $bookings->count() . __(' Bookings found') }}</span>
+                    <span>{{ ($bookings->count() + $todayBookings->count()) . __(' Bookings found') }}</span>
                 </div>
 
                 <div class="buttons">
@@ -75,7 +75,7 @@
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
                                                 <span style="font-size: 14px">{{ \App\Tools::displayPrice($booking->price) }}</span>
-                                                <span>{{ __('Price') }}</span>
+                                                <span>{{ __('Total Price') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
@@ -101,8 +101,8 @@
                                                             <i class="lnil lnil-user-alt"></i>
                                                         </div>
                                                         <div class="meta">
-                                                            <span>Profile</span>
-                                                            <span>View profile</span>
+                                                            <span>Client</span>
+                                                            <span>View client profile</span>
                                                         </div>
                                                     </a>
                                                     <hr class="dropdown-divider">
@@ -156,7 +156,7 @@
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
                                                 <span style="font-size: 14px">{{ \App\Tools::displayPrice($booking->price) }}</span>
-                                                <span>{{ __('Price') }}</span>
+                                                <span>{{ __('Total Price') }}</span>
                                             </div>
                                             <div class="separator"></div>
                                             <div class="stat m-l-20 m-r-20">
@@ -182,8 +182,8 @@
                                                             <i class="lnil lnil-user-alt"></i>
                                                         </div>
                                                         <div class="meta">
-                                                            <span>Profile</span>
-                                                            <span>View profile</span>
+                                                            <span>Client</span>
+                                                            <span>View client profile</span>
                                                         </div>
                                                     </a>
                                                     <hr class="dropdown-divider">
