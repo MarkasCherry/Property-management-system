@@ -8,7 +8,7 @@ class StatisticsController extends Controller
 {
     public function index()
     {
-        $statistics = WeeklyStatistics::latest()->get()->take(100);
+        $statistics = WeeklyStatistics::latest()->get()->take(52);
 
         return view('statistics.index', compact('statistics'));
     }
