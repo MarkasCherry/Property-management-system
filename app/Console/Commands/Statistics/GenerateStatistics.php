@@ -2,11 +2,14 @@
 
 namespace App\Console\Commands\Statistics;
 
+use App\Mail\SendLastWeekStatistics;
 use App\Models\Booking;
 use App\Models\Client;
+use App\Models\Setting;
 use App\Models\WeeklyStatistics;
 use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Mail;
 
 class GenerateStatistics extends Command
 {
@@ -38,14 +41,16 @@ class GenerateStatistics extends Command
     {
         try {
 
-            WeeklyStatistics::create([
+            $statistic = WeeklyStatistics::create([
                 'bookings_count' => $this->getLastWeekData(Booking::class)->count(),
                 'new_clients_count' => $this->getLastWeekData(Client::class)->count(),
                 'total_income' => $this->getLastWeekData(Booking::class)->sum('price'),
             ]);
 
-            $this->output->success('Weekly statistics has been generated successfully!');
+            Mail::to(Setting::whereName('Email')->first()->value)
+                ->send(new SendLastWeekStatistics($statistic));
 
+            $this->output->success('Weekly statistics has been generated successfully!');
         } catch (\Exception $exception) {
             $this->output->error('There was an error while generated last week statistics');
         }
