@@ -94,6 +94,11 @@
                     <i data-feather="users"></i>
                     <span>{{ __('Clients') }}</span>
                 </a>
+                <a href="{{ route('rooms.housekeeping') }}" id="dashboards-navbar-menu"
+                   class="centered-link">
+                    <i data-feather="feather"></i>
+                    <span>{{ __('Housekeeping') }}</span>
+                </a>
                 <a href="{{ route('statistics.index') }}" id="dashboards-navbar-menu"
                    class="centered-link">
                     <i data-feather="bar-chart-2"></i>

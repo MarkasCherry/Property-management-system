@@ -11,6 +11,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
  * @method static active()
+ * @method static whereNeedsHousekeeping(bool $true)
+ * @method static find($id)
  */
 class Room extends Model implements HasMedia
 {
@@ -31,7 +33,8 @@ class Room extends Model implements HasMedia
         'seo_meta_title',
         'seo_meta_description',
         'active',
-        'last_housekeeping'
+        'last_housekeeping',
+        'needs_housekeeping'
     ];
 
     public function property(): Relation

@@ -4,7 +4,7 @@
 
 @section('content')
     <x-forms.layout headerTitle='Edit room {{ $room->room_number }} of "{{ $room->property->name }}"' redirect="{{ route('properties.show', $room->property) }}">
-        <x-ui.tabs :tabs="['mainSettings', 'media', 'seoSettings']">
+        <x-ui.tabs :tabs="['mainSettings', 'media', 'housekeeping', 'seoSettings']">
             <x-slot name="mainSettings">
                 <form method="post" action="{{ route('rooms.update', $room) }}">
                     @csrf
@@ -22,18 +22,7 @@
                             </x-inputs.group>
                         </div>
 
-                        <div class="column is-3">
-                            <div class="field">
-                                <x-jet-label for="last_housekeeping" value="{{ __('Last Housekeeping') }}"/>
-                                <input type="date" name="last_housekeeping"
-                                       value="{{ old('last_housekeeping') ?? Carbon\Carbon::parse($room->last_housekeeping)->format('Y-m-d') }}"
-                                       class="input"
-                                />
-                                <x-jet-input-error for="last_housekeeping" class="mt-2"/>
-                            </div>
-                        </div>
-
-                        <div class="column is-3">
+                        <div class="column is-6">
                             <div class="columns is-centered m-t-5">
                                 <x-inputs.switcher name="active" checked="{{ $room->active }}">
                                     <x-slot name="title">{{ __('Active?') }}</x-slot>
@@ -83,6 +72,34 @@
 
             <x-slot name="media">
                 <x-forms.media :model="'App_Models_Room'" :modelId="$room->id"></x-forms.media>
+            </x-slot>
+
+            <x-slot name="housekeeping">
+                <form method="post" action="{{ route('rooms.updateHousekeeping', $room) }}">
+                    @csrf
+                    @method('PUT')
+                    <div class="columns is-multiline">
+                        <div class="column is-6">
+                            <div class="field">
+                                <x-jet-label for="last_housekeeping" value="{{ __('Last Housekeeping') }}"/>
+                                <input type="date" name="last_housekeeping"
+                                       value="{{ old('last_housekeeping') ?? Carbon\Carbon::parse($room->last_housekeeping)->format('Y-m-d') }}"
+                                       class="input"
+                                />
+                                <x-jet-input-error for="last_housekeeping" class="mt-2"/>
+                            </div>
+                        </div>
+
+                        <div class="column is-6 m-b-20">
+                            <div class="columns is-centered">
+                                <x-inputs.switcher name="needs_housekeeping" checked="{{ $room->needs_housekeeping }}">
+                                    <x-slot name="title">{{ __('Needs housekeeping?') }}</x-slot>
+                                </x-inputs.switcher>
+                            </div>
+                        </div>
+                    </div>
+                    <x-buttons.form-submit title="{{ __('Save Main Settings') }}"></x-buttons.form-submit>
+                </form>
             </x-slot>
 
             <x-slot name="seoSettings">

@@ -59,6 +59,12 @@ class SendHousekeepingReminder extends Command
             })
             ->get();
 
+        foreach ($rooms as $room) {
+            $room->update([
+                'needs_housekeeping' => true
+            ]);
+        }
+
         Mail::to(Setting::whereName('Housekeeping Email')->first()->value)
             ->send(new SendHousekeepingRooms($rooms));
     }

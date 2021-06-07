@@ -59,6 +59,8 @@ Route::group([
     Route::resource('rooms', RoomController::class);
     Route::put('rooms/{room}/updateMedia', [RoomController::class, 'updateMedia'])->name('rooms.updateMedia');
     Route::put('rooms/{room}/updateSeo', [RoomController::class, 'updateSeo'])->name('rooms.updateSeo');
+    Route::get('housekeeping', [RoomController::class, 'housekeeping'])->name('rooms.housekeeping');
+    Route::put('rooms/housekeeping/{room}/update', [RoomController::class, 'updateHousekeeping'])->name('rooms.updateHousekeeping');
 
     //Facilities
     Route::resource('amenities', AmenityController::class);

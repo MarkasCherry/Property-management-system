@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RoomHousekeepingRequest;
 use App\Http\Requests\RoomRequest;
 use App\Http\Requests\SeoRequests;
 use App\Models\Property;
@@ -28,15 +29,22 @@ class RoomController extends Controller
         $room->delete();
     }
 
-    public function updateMedia(Request $request, Room $room)
-    {
-        dd('media upload');
-    }
-
     public function updateSeo(SeoRequests $request, Room $room): RedirectResponse
     {
         $room->update($request->validated());
 
         return back()->with('success', __('Seo Settings has been updated!'));
+    }
+
+    public function housekeeping()
+    {
+        return view('properties.rooms.housekeeping');
+    }
+
+    public function updateHousekeeping(RoomHousekeepingRequest $request, Room $room): RedirectResponse
+    {
+        $room->update($request->validated());
+
+        return redirect()->back()->with('success', 'Housekeeping has been updated');
     }
 }
